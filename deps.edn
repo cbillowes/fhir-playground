@@ -1,9 +1,10 @@
-{:aliases  {:dev {:extra-paths ["development/src"]
+{:aliases  {:dev {:extra-paths ["development/src"
+                                "bases/fhir/src"]
 
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
                                samd/fhir {:local/root "bases/fhir"}}}
 
-            :test {:extra-paths []}
+            :test {:extra-paths ["bases/fhir/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}
