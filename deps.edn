@@ -6,4 +6,12 @@
             :test {:extra-paths []}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
-                   :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}}}
+                   :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}
+
+            :debug {;; https://flow-storm.github.io/flow-storm-debugger/user_guide.html#_clojurestorm
+                    ;; for disabling the official compiler
+                    :classpath-overrides {org.clojure/clojure nil}
+                    :extra-deps {com.github.flow-storm/clojure {:mvn/version "1.12.0-3"}
+                                 com.github.flow-storm/flow-storm-dbg {:mvn/version "4.1.2"}}
+                    :jvm-opts ["-Dclojure.storm.instrumentEnable=true"
+                               "-Dclojure.storm.instrumentOnlyPrefixes=nomad."]}}}
