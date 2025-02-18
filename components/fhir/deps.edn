@@ -1,0 +1,4 @@
+{:paths ["src" "resources"]
+ :deps {clj-http/clj-http {:mvn/version "3.13.0"}}
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps {}}}}

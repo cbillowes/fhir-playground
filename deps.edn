@@ -1,15 +1,17 @@
 {:aliases  {:dev {:extra-paths ["development/src"
-                                "bases/fhir/src"]
+                                "components/fhir/src"]
 
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
                                io.pedestal/pedestal.service {:mvn/version "0.7.2"}
                                io.pedestal/pedestal.jetty {:mvn/version "0.7.2"}
                                io.pedestal/pedestal.route {:mvn/version "0.7.2"}
+                               clj-http/clj-http {:mvn/version "3.13.0"}
 
                                ;; Polylith
-                               samd/fhir {:local/root "bases/fhir"}}}
+                               samd/service {:local/root "bases/service"}
+                               samd/fhir {:local/root "components/fhir"}}}
 
-            :test {:extra-paths ["bases/fhir/test"]}
+            :test {:extra-paths ["components/fhir/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}
