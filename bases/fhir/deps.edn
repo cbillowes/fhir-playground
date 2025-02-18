@@ -1,4 +1,6 @@
 {:paths ["src" "resources"]
- :deps {}
+ :deps {io.pedestal/pedestal.service {:mvn/version "0.7.2"}
+        io.pedestal/pedestal.jetty {:mvn/version "0.7.2"}
+        io.pedestal/pedestal.route {:mvn/version "0.7.2"}}
  :aliases {:test {:extra-paths ["test"]
                   :extra-deps {}}}}
