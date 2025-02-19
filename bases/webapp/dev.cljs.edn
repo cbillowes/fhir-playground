@@ -1,0 +1,7 @@
+^{:watch-dirs ["test" "src"]
+  :css-dirs ["resources/public/css"]
+  :auto-testing true
+  :auto-bundle :webpack
+  :open-url false}
+{:main dev.curiousprogrammer.webapp.web.core
+ :figwheel {:server-port 9500}}

@@ -1,2 +1,2 @@
-(ns dev.curiousprogrammer.core-test
+(ns dev.curiousprogrammer.webapp.web.core-test
   (:require [cljs.test :refer-macros [deftest is testing]]))

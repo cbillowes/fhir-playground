@@ -1,5 +1,5 @@
-(ns dev.curiousprogrammer.page-patients
-  (:require [dev.curiousprogrammer.ui :as ui]))
+(ns dev.curiousprogrammer.webapp.web.page-patients
+  (:require [dev.curiousprogrammer.webapp.web.ui :as ui]))
 
 
 (defn- filter-selectbox
@@ -13,6 +13,6 @@
    "🧑‍😷 Search FHIR Patients"
    [:<>
     [:p "Fast Healthcare Interoperability Resources"]
-    [:div.bg-gray-50.p-8.rounded-lg.shadow-lg.mt-8
-     [:div.flex.gap-4.mb-4 [ui/textbox "Filter value:" :title-class "text-red-900"] [filter-selectbox]]
+    [:div {:class "bg-gray-50 p-8 rounded-lg mt-8"}
+     [:div {:class "flex gap-4 mb-4"} [ui/textbox "Filter value:" :title-class "text-red-900"] [filter-selectbox]]
      [ui/button "Search" :class "bg-yellow-400 text-yellow-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer"]]]])

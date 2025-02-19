@@ -10,6 +10,7 @@
                                io.pedestal/pedestal.jetty {:mvn/version "0.7.2"}
                                io.pedestal/pedestal.route {:mvn/version "0.7.2"}
                                clj-http/clj-http {:mvn/version "3.13.0"}
+                               com.taoensso/timbre {:mvn/version "6.6.1"}
 
                                ;; Polylith
                                samd/service {:local/root "bases/service"}
