@@ -1,4 +1,6 @@
 {:aliases  {:dev {:extra-paths ["development/src"
+                                "bases/service/src"
+                                "bases/webapp/src"
                                 "components/fhir/src"]
 
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
@@ -9,9 +11,12 @@
 
                                ;; Polylith
                                samd/service {:local/root "bases/service"}
+                               samd/webapp {:local/root "bases/webapp"}
                                samd/fhir {:local/root "components/fhir"}}}
 
-            :test {:extra-paths ["components/fhir/test"]}
+            :test {:extra-paths ["bases/service/test"
+                                 "bases/webapp/test"
+                                 "components/fhir/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}
