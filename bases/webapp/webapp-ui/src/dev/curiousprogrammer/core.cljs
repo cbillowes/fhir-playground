@@ -12,15 +12,8 @@
   (gdom/getElement "app"))
 
 
-(defn layout [heading component]
-  [:div {:class "my-8 w-1/2 mx-auto text-center"}
-   [:div.bg-red-400.p-8.rounded-lg.shadow-lg
-    [:h1.text-5xl.font-bold.mb-8.text-red-900 heading]
-    component]])
-
-
 (defn page []
-  (patients/patients-page layout))
+  (patients/patients-page))
 
 (defn mount [el]
   (rdom/render [page] el))
