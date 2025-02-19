@@ -14,14 +14,14 @@
                         :or {title-class ""}}]
   [:div.w-full.bg-gray-200.p-2.rounded-lg
    [:p {:class (str "mb-2 text-xs text-left " title-class)} title]
-   [:input {:type "text" :class "w-full p-2 outline-gray-300"}]])
+   [:input {:type "text" :class "w-full p-2 outline-gray-100"}]])
 
 
 (defn selectbox [title options & {:keys [title-class]
                                   :or {title-class ""}}]
   [:div.w-full.bg-gray-200.p-2.rounded-lg
    [:p {:class (str "mb-2 text-xs text-left " title-class)} title]
-   [:select {:class "bg-gray-200 p-2 rounded-lg w-full"}
+   [:select {:class "bg-gray-200 p-2 rounded-lg w-full outline-gray-100"}
     (for [{:keys [value option disabled?]} options]
       [:option {:value value :disabled disabled?} option])]])
 
