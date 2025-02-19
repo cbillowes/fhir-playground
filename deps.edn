@@ -1,3 +1,5 @@
+;; clojure -M:<alias>
+;; eg. clojure -M:outdated
 {:aliases  {:dev {:extra-paths ["development/src"
                                 "bases/service/src"
                                 "bases/webapp/src"
@@ -22,7 +24,6 @@
                    :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}
 
 
-            ;; clojure -M:repl
             :repl {:main-opts ["-m" "nrepl.cmdline"
                                "--interactive"
                                "--port" "10000"
@@ -38,4 +39,7 @@
                     :extra-deps {com.github.flow-storm/clojure {:mvn/version "1.12.0-3"}
                                  com.github.flow-storm/flow-storm-dbg {:mvn/version "4.1.2"}}
                     :jvm-opts ["-Dclojure.storm.instrumentEnable=true"
-                               "-Dclojure.storm.instrumentOnlyPrefixes=nomad."]}}}
+                               "-Dclojure.storm.instrumentOnlyPrefixes=nomad."]}
+
+            :outdated {:main-opts ["-m" "antq.core"]
+                       :extra-deps {com.github.liquidz/antq {:mvn/version "2.11.1260"}}}}}
