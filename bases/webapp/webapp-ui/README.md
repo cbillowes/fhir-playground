@@ -2,6 +2,8 @@
 
 ## From scratch
 
+[Figwheel Tutorial](https://figwheel.org/tutorial)
+
 ```bash
 # Install clj-new https://github.com/seancorfield/clj-new
 clojure -Ttools install-latest :lib com.github.seancorfield/clj-new :as clj-new
