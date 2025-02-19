@@ -11,6 +11,6 @@
   },
   "scripts": {
     "css:watch": "npx @tailwindcss/cli -i resources/public/css/style.css -o resources/public/css/style.min.css --watch",
-    "dev": "clojure -M:fig:build"
+    "dev:watch": "clojure -M:fig:build"
   }
 }
