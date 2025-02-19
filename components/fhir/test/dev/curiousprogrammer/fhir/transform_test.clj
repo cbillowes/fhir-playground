@@ -8,18 +8,31 @@
   {:entry (map (fn [patient] {:resource patient}) patients)})
 
 
+(defn- sample-address
+  [& {:keys [use lines city state postal-code country]}]
+  {:use use
+   :lines lines
+   :city city
+   :state state
+   :postalCode postal-code
+   :country country})
+
+
+(defn- sample-telecom
+  [& {:keys [system value]}]
+  {:system system :value value})
+
+
 (defn- sample-patient
-  [& {:keys [id name family gender birth-date address communication resource-type]}]
-  (let [{:keys [lines city state postal-code country]} address
-        {:keys [method value]} communication]
-    (cond-> {}
-      id (assoc :id id)
-      (or name family) (assoc :name [{:family family :given [name]}])
-      gender (assoc :gender gender)
-      birth-date (assoc :birthDate birth-date)
-      address (assoc :address [{:use (:use address) :line lines :city city :state state :postalCode postal-code :country country}])
-      communication (assoc :telecom [{:system method :value value :use (:use communication)}])
-      resource-type (assoc :resourceType resource-type))))
+  [& {:keys [id name family gender birth-date address telecom resource-type]}]
+  (cond-> {}
+    id (assoc :id id)
+    (or name family) (assoc :name [{:family family :given [name]}])
+    gender (assoc :gender gender)
+    birth-date (assoc :birthDate birth-date)
+    address (assoc :address address)
+    telecom (assoc :telecom telecom)
+    resource-type (assoc :resourceType resource-type)))
 
 
 (defn- transform-and-select
@@ -30,61 +43,46 @@
 
 
 (deftest transform-test
-  (testing "xxx"
+  (testing "Should transform fields for a patient"
     (is (= {:id "123"}
            (->> (sample-response [(sample-patient :id "123")])
-                (transform-and-select [:id]))))
+                (transform-and-select [:id])))
+        "ID not correctly transformed.")
 
     (is (= {:name "John"}
            (->> (sample-response [(sample-patient :name "John")])
-                (transform-and-select [:name]))))
+                (transform-and-select [:name])))
+        "Name not correctly transformed.")
 
     (is (= {:surname "Smith"}
            (->> (sample-response [(sample-patient :family "Smith")])
-                (transform-and-select [:surname]))))
+                (transform-and-select [:surname])))
+        "Surname not correctly transformed.")
 
     (is (= {:gender "male"}
            (->> (sample-response [(sample-patient :gender "male")])
-                (transform-and-select [:gender]))))
+                (transform-and-select [:gender])))
+        "Gender not correctly transformed.")
 
     (is (= {:date-of-birth "1995-01-01"}
            (->> (sample-response [(sample-patient :birth-date "1995-01-01")])
-                (transform-and-select [:date-of-birth]))))
+                (transform-and-select [:date-of-birth])))
+        "Date of birth not correctly transformed.")
 
-    (is (= {:address "Smith Rd, Seattle, WA, 000000, USA"}
-           (->> (sample-response [(sample-patient :address {:use "work" :lines ["Smith Rd"] :city "Seattle" :state "WA" :postal-code "000000" :country "USA"})])
-                (transform-and-select [:address]))))))
+    (is (= {:work-address "Smith Rd, Seattle, WA, 000000, USA"}
+           (->> (sample-response [(sample-patient :address [(sample-address :use "work" :lines ["Smith Rd"] :city "Seattle" :state "WA" :postal-code "000000" :country "USA")])])
+                (transform-and-select [:work-address])))
+        "Work address not correctly transformed.")
 
+    (is (= {:home-address "Smith Rd, Seattle, WA, 000000, USA"}
+           (->> (sample-response [(sample-patient :address [(sample-address :use "home" :lines ["Smith Rd"] :city "Seattle" :state "WA" :postal-code "000000" :country "USA")])])
+                (transform-and-select [:home-address])))
+        "Home address not correctly transformed.")
 
-
-  #_(testing "Should extract all relevant fields from a patient"
-    (let [patient {:address
-                   [{:use "work",
-                     :line ["AAAAAAAAAAAAAAAAAAAAA "],
-                     :city "Seattle",
-                     :state "WA",
-                     :postalCode "000000",
-                     :country "USA"}],
-                   :meta
-                   {:versionId "1",
-                    :lastUpdated "2020-02-02T04:47:22.062+00:00",
-                    :source "#bGpxjGKj6e084WBp"},
-                   :name [{:family "Yang", :given ["Dave"]}],
-                   :birthDate "1995-08-25",
-                   :resourceType "Patient",
-                   :id "596571",
-                   :identifier [{:value "Tyang358"}],
-                   :telecom [{:system "phone", :value "2232231111", :use "home"}],
-                   :gender "male",
-                   :text
-                   {:status "generated",
-                    :div
-                    "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Dave <b>YANG </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>Tyang358</td></tr><tr><td>Address</td><td><span>AAAAAAAAAAAAAAAAAAAAA </span><br/><span>Seattle </span><span>WA </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>25 August 1995</span></td></tr></tbody></table></div>"}}]
-      (is (= {:id "596571",
-              :name "Dave",
-              :surname "Yang",
-              :gender "male",
-              :date-of-birth "1995-08-25"}
-             (sut/simplify-patient patient)))))
+    (is (= {:home-address nil
+            :work-address nil}
+           (->> (sample-response [(sample-patient :address [])])
+                (transform-and-select [:home-address :work-address])))
+        "Work and home addresses should remain blank when not specified.")))
 
 
