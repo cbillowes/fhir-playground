@@ -2,7 +2,7 @@
 
 ## From scratch
 
-[Figwheel Tutorial](https://figwheel.org/tutorial)
+[Figwheel Tutorial](https://figwheel.org/tutorial) | [Tailwind CSS](https://tailwindcss.com/)
 
 ```bash
 # Install clj-new https://github.com/seancorfield/clj-new

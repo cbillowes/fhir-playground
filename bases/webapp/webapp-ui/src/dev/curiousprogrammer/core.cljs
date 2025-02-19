@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks dev.curiousprogrammer.webapp-ui
+(ns ^:figwheel-hooks dev.curiousprogrammer.core
   (:require [goog.dom :as gdom]
             [reagent.core :as reagent :refer [atom]]
             [reagent.dom :as rdom]
@@ -11,8 +11,16 @@
 (defn get-app-element []
   (gdom/getElement "app"))
 
+
+(defn layout [heading component]
+  [:div {:class "my-8 w-1/2 mx-auto text-center"}
+   [:div.bg-red-400.p-8.rounded-lg.shadow-lg
+    [:h1.text-5xl.font-bold.mb-8.text-red-900 heading]
+    component]])
+
+
 (defn page []
-  [patients/patients-page])
+  (patients/patients-page layout))
 
 (defn mount [el]
   (rdom/render [page] el))

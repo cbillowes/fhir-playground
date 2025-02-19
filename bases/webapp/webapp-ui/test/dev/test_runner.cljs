@@ -2,7 +2,7 @@
 (ns dev.test-runner
   (:require
     ;; require all the namespaces that you want to test
-    [dev.curiousprogrammer.webapp-ui-test]
+    [dev.curiousprogrammer.core-test]
     [figwheel.main.testing :refer [run-tests-async]]))
 
 (defn -main [& args]
