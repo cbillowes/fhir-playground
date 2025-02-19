@@ -1,7 +1,8 @@
 (ns dev.curiousprogrammer.fhir.api-test
   (:require [clojure.test :as test :refer :all]
             [clj-http.client :as client]
-            [dev.curiousprogrammer.fhir.api :as sut]))
+            [dev.curiousprogrammer.fhir.api :as sut]
+            [dev.curiousprogrammer.fhir.query :as q]))
 
 
 (deftest api-test
@@ -46,6 +47,20 @@
                                  (reset! *api-called? true)
                                  {:body []})]
         (let [actual (sut/fetch-patients page page-size)]
+          (is (true? @*api-called?) "API was not called as expected.")
+          (is (= [] actual)
+              "Page size of 1000 is accepted."))))
+
+     (let [*api-called? (atom false)
+           page 1
+           page-size 1000]
+      (with-redefs [client/get (fn [url opts]
+                                 (is (= "https://hapi.fhir.org/baseR4/Patient" url))
+                                 (is (= {"_count" page-size "_offset" page "address" "123 Jameson Str" "given" "John"} (:query-params opts)))
+                                 (reset! *api-called? true)
+                                 {:body []})]
+        (let [query (q/build-patient-query-for-search :partial-address "123 Jameson Str" :given-name "John")
+              actual (sut/fetch-patients page page-size query)]
           (is (true? @*api-called?) "API was not called as expected.")
           (is (= [] actual)
               "Page size of 1000 is accepted."))))))
