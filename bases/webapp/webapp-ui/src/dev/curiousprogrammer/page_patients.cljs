@@ -3,4 +3,4 @@
 
 (defn patients-page
   []
-  [:div "Patients"])
+  [:div.bg-red-400 "Patients"])
