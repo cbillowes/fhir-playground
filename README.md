@@ -1,4 +1,8 @@
-<img src="logo.png" width="30%" alt="Polylith" id="logo">
+# SaMD
+
+Software-as-a-Medical-Device.
+
+## Polylith Workspace
 
 The Polylith documentation can be found here:
 
@@ -8,6 +12,8 @@ The Polylith documentation can be found here:
 
 You can also get in touch with the Polylith Team on [Slack](https://clojurians.slack.com/archives/C013B7MQHJQ).
 
-<h1>samd</h1>
+## License
 
-<p>Add your workspace documentation here...</p>
+Copyright © 2025 Clarice Bouwer
+
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
