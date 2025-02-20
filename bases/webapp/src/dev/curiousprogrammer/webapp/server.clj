@@ -1,49 +1,55 @@
 (ns dev.curiousprogrammer.webapp.server
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
-            [io.pedestal.http.ring-middlewares :as middlewares]
-            [taoensso.timbre :as logger]
-            [clojure.java.io :as io]))
+            [taoensso.timbre :as logger]))
+
+(def port 3000)
 
 
-(defonce server-instance (atom nil))
-
-
-(def static-content-interceptor
-  (middlewares/resource "/public"))
+(defonce *server (atom nil))
 
 
 (def routes
   (route/expand-routes
-   #{["/" :get (fn [_] {:status 200
-                        :headers {"Content-Type" "text/html"}
-                        :body (slurp (io/resource "public/index.html"))})
-      :route-name :home]
-     ;; This allows any file under `resources/public/` to be served directly
-     ["/*" :get static-content-interceptor]}))
+   #{["/api/" :get (fn [_] {:status 200
+                        :headers {"Content-Type" "text/plain"}
+                        :body "OK"})
+      :route-name :home]}))
 
 
 (def service
   {:env :prod
    ::http/routes routes
    ::http/type :jetty
-   ::http/port 3000})
+   ::http/port port
+   #_#_::http/middlewares [(wrap-cors
+                        :access-control-allow-origin [#".*"]
+                        :access-control-allow-methods [:get :post :put :delete]
+                        :access-control-allow-headers ["Content-Type" "Authorization"])]})
 
 
 (defn stop []
-  (when @server-instance
-    (http/stop @server-instance)
-    (reset! server-instance nil)
-    (logger/info "Server stopped gracefully.")))
+  (logger/info "Trying to stop server...")
+  (if @*server
+   (do
+     (reset! *server nil)
+     (http/stop service)
+     (logger/info "Server stopped gracefully."))
+    (logger/info "Server already stopped.")))
 
 
 (defn start []
-  (when (nil? @server-instance)
-    (let [server (http/start (http/create-server service))]
-      (reset! server-instance server)
-      (logger/info "Server started on port 3000")
+  (logger/info "Trying to start server...")
+  (if (nil? @*server)
+    (do
+      (reset! *server (http/create-server service))
+      (http/start @*server)
+      (logger/info "Server already started.")
       (.addShutdownHook (Runtime/getRuntime)
-                        (Thread. #(stop))))))
+                        (Thread. #(stop))))
+    (logger/info "Server already running.")))
 
 
-(start)
+(defn -main
+  [& args]
+  (start))

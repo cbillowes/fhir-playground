@@ -3,12 +3,32 @@
         org.clojure/clojurescript {:mvn/version "1.11.132"}
         org.clojure/data.json {:mvn/version "2.5.1"}
         reagent/reagent {:mvn/version "1.2.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]}
+
+       ;; Figwheel for hot-reloading
+        com.bhauman/figwheel-main {:mvn/version "0.2.18"}
+
+        ;; Pedestal (core HTTP handling)
         ;; http://pedestal.io/pedestal/0.7/guides/pedestal-with-component.html
         io.pedestal/pedestal.service {:mvn/version "0.7.2"}
         io.pedestal/pedestal.jetty {:mvn/version "0.7.2"}
         io.pedestal/pedestal.route {:mvn/version "0.7.2"}
         com.stuartsierra/component {:mvn/version "1.1.0"}
         com.stuartsierra/component.repl {:mvn/version "1.0.0"}
+
+        ;; Ring Core - Required for middleware & handlers
+        ring/ring-core {:mvn/version "1.11.0"}
+        ;; Jetty Adapter - Needed to run Pedestal with Jetty
+        ring/ring-jetty-adapter {:mvn/version "1.11.0"}
+        ;; Middleware Defaults (helps with static files & CORS)
+        ring/ring-defaults {:mvn/version "0.3.4"}
+        ;; Middleware for serving static files
+        ring/ring-servlet {:mvn/version "1.11.0"}
+        ;; Enables CORS (for API requests from browsers)
+        ring-cors/ring-cors {:mvn/version "0.1.13"}
+        ;; Logging middleware
+        ring-logger/ring-logger {:mvn/version "1.1.1"}
+
+        ;; Logging
         com.taoensso/timbre {:mvn/version "6.6.1"}
         org.slf4j/slf4j-simple {:mvn/version "2.0.16"}}
  :aliases {:test {:extra-paths ["test"]
@@ -19,6 +39,9 @@
                   com.bhauman/figwheel-main {:mvn/version "0.2.20"}
                   org.slf4j/slf4j-nop {:mvn/version "2.0.16"}}
                  :extra-paths ["target" "test"]}
+           :serve {:main-opts ["-m" "dev.curiousprogrammer.webapp.server"]}
+           ;; -b dev	Specifies the build name as dev (corresponding to dev.cljs.edn)
+           ;; -r	Starts a REPL after launching Figwheel
            :build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
            :clean {:main-opts ["-m" "figwheel.main" "--clean" "dev"]}
            :min   {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}}}
