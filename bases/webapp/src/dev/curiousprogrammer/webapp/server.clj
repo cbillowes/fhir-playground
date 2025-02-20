@@ -2,7 +2,11 @@
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
             [io.pedestal.http.ring-middlewares :as middlewares]
+            [taoensso.timbre :as logger]
             [clojure.java.io :as io]))
+
+
+(defonce server-instance (atom nil))
 
 
 (def static-content-interceptor
@@ -23,17 +27,23 @@
   {:env :prod
    ::http/routes routes
    ::http/type :jetty
-   ::http/port 8081})
-
-
-;; Start the server
-(defn start []
-  (http/start (http/create-server service)))
+   ::http/port 3000})
 
 
 (defn stop []
-  (http/stop (http/create-server service)))
+  (when @server-instance
+    (http/stop @server-instance)
+    (reset! server-instance nil)
+    (logger/info "Server stopped gracefully.")))
+
+
+(defn start []
+  (when (nil? @server-instance)
+    (let [server (http/start (http/create-server service))]
+      (reset! server-instance server)
+      (logger/info "Server started on port 3000")
+      (.addShutdownHook (Runtime/getRuntime)
+                        (Thread. #(stop))))))
 
 
 (start)
-;; Call (start) in the REPL or add `(start)` at the bottom of the file
