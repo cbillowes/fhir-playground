@@ -1,12 +1,14 @@
 (ns dev.curiousprogrammer.webapp.server
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
+            [nrepl.server :as nrepl]
             [taoensso.timbre :as logger]))
 
 (def port 3000)
 
 
 (defonce *server (atom nil))
+(defonce *repl-server (atom nil))
 
 
 (def routes
@@ -29,27 +31,41 @@
 
 
 (defn stop []
-  (logger/info "Trying to stop server...")
-  (if @*server
-   (do
-     (reset! *server nil)
-     (http/stop service)
-     (logger/info "Server stopped gracefully."))
-    (logger/info "Server already stopped.")))
+  (when @*server
+    (http/stop @*server)
+    (reset! *server nil)
+    (logger/info "⛔ Webserver stopped"))
+
+  (when @*repl-server
+    (nrepl/stop-server @*repl-server)
+    (reset! *repl-server nil)
+    (logger/info "⛔ nREPL stopped")))
 
 
-(defn start []
+(defn start-server []
   (logger/info "Trying to start server...")
   (if (nil? @*server)
     (do
       (reset! *server (http/create-server service))
       (http/start @*server)
-      (logger/info "Server already started.")
+      (logger/info (str "🚀 Server started on" port))
       (.addShutdownHook (Runtime/getRuntime)
                         (Thread. #(stop))))
     (logger/info "Server already running.")))
 
 
+(defn start-repl []
+  (when (nil? @*repl-server)
+    (let [server (nrepl/start-server :port 7000)]
+      (reset! *repl-server server)
+      (logger/info "🔁 nREPL started on port 7000"))))
+
+
+(def ring-handler
+  (http/create-servlet service))
+
+
 (defn -main
   [& args]
-  (start))
+  (start-server)
+  (start-repl))
