@@ -1,7 +1,6 @@
 ;; clojure -M:<alias>
 ;; eg. clojure -M:outdated
 {:aliases  {:dev {:extra-paths ["development/src"
-                                "bases/service/src"
                                 "bases/webapp/src"
                                 "components/fhir/src"]
 
@@ -13,12 +12,10 @@
                                com.taoensso/timbre {:mvn/version "6.6.1"}
 
                                ;; Polylith
-                               samd/service {:local/root "bases/service"}
                                samd/webapp {:local/root "bases/webapp"}
                                samd/fhir {:local/root "components/fhir"}}}
 
-            :test {:extra-paths ["bases/service/test"
-                                 "bases/webapp/test"
+            :test {:extra-paths ["bases/webapp/test"
                                  "components/fhir/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
