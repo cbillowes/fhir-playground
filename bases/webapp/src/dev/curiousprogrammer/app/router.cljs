@@ -3,9 +3,12 @@
             [pushy.core :as pushy]
             [re-frame.core :refer [dispatch]]))
 
+
+(def default-route :home)
+
 (def ^{:doc "Defined routes for the application."}
   routes
-  ["/" {""       :home
+  ["/" {""       default-route
         "search" :search
         true     :not-found}])
 

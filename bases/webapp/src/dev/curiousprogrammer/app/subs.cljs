@@ -1,6 +1,7 @@
 (ns dev.curiousprogrammer.app.subs
   (:require [clojure.string :as str]
-            [re-frame.core :as rf]))
+            [re-frame.core :as rf]
+            [dev.curiousprogrammer.app.router :as router]))
 
 
 (rf/reg-sub
@@ -9,7 +10,6 @@
    (let [pathname (.-pathname js/window.location)
          page-name (-> (str/split pathname #"/")
                        (second)
-                       (keyword)
-                       (or :home))]
-     (or (:active-page db) page-name))))
+                       (keyword))]
+     (or (:active-page db) page-name router/default-route))))
 

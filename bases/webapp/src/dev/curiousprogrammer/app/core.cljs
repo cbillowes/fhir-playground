@@ -10,23 +10,48 @@
             [dev.curiousprogrammer.app.events]
             [dev.curiousprogrammer.app.subs]))
 
-(defn get-app-element []
+(defn- get-app-element []
   (gdom/getElement "app"))
 
 
-(defn pages
-  [page-name]
-  (case page-name
-    :home [home/page]
-    :search [patients/page]
-    [not-found/page]))
+
+(defn- header-menu-item
+  [name page]
+  [:a.cursor-pointer.inline-block.rounded-md.px-4.py-1.my-4.bg-slate-700.hover:bg-yellow-400.hover:text-black
+   {:on-click #(rf/dispatch [:set-active-page {:page page}])} name])
+
+
+(defn- header
+  []
+  [:header {:class "max-w-6xl mx-auto"}
+   [:nav
+    [:ul.flex.text-white.gap-4
+     [:li [header-menu-item "Home" :home]]
+     [:li [header-menu-item "Search patients" :search]]]]])
+
+
+(defn- footer
+  []
+  [:footer
+   [:p.text-center.text-gray-400.p-4
+    (str "© " (-> (js/Date.) .getFullYear) " Curious Programmer")]])
+
+
+(defn- pages
+  []
+  (let [page-name @(rf/subscribe [:active-page])]
+    (case page-name
+      :home [home/page]
+      :search [patients/page]
+      [not-found/page])))
 
 
 (defn app
   []
-  (let [active-page @(rf/subscribe [:active-page])]
-    [pages active-page]))
-
+  [:<>
+   [header]
+   [pages]
+   [footer]])
 
 
 (defn mount [el]
@@ -35,6 +60,8 @@
 
 (defn init []
   (router/start!)
+  (rf/dispatch-sync [:initialize-db])
+  (rf/dispatch-sync [:set-active-page {:page router/default-route}])
   (when-let [el (get-app-element)]
     (mount el)))
 

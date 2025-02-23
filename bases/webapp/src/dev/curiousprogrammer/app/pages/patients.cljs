@@ -72,7 +72,6 @@
 
 (defn page
   []
-  (rf/dispatch-sync [:initialize-db])
   [ui/layout
    "🧑‍😷 Search FHIR Patients"
    [:<>
