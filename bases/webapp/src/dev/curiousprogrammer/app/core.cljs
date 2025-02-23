@@ -2,6 +2,7 @@
   (:require [goog.dom :as gdom]
             [reagent.dom :as rdom]
             [re-frame.core :as rf]
+            [dev.curiousprogrammer.app.ui :as ui]
             [dev.curiousprogrammer.app.router :as router]
             [dev.curiousprogrammer.app.pages.home :as home]
             [dev.curiousprogrammer.app.pages.patients :as patients]
@@ -13,29 +14,6 @@
 
 (defn- get-app-element []
   (gdom/getElement "app"))
-
-
-
-(defn- header-menu-item
-  [name page]
-  [:a.cursor-pointer.inline-block.rounded-md.px-4.py-1.my-4.bg-slate-700.hover:bg-yellow-400.hover:text-black
-   {:on-click #(rf/dispatch [:set-active-page {:page page}])} name])
-
-
-(defn- header
-  []
-  [:header {:class "max-w-6xl mx-auto"}
-   [:nav
-    [:ul.flex.text-white.gap-4
-     [:li [header-menu-item "Home" :home]]
-     [:li [header-menu-item "Search patients" :search]]]]])
-
-
-(defn- footer
-  []
-  [:footer
-   [:p.text-center.text-gray-400.p-4.mt-4.text-sm
-    (str "Copyright © " (-> (js/Date.) .getFullYear) " Curious Programmer")]])
 
 
 (defn- pages
@@ -50,9 +28,9 @@
 (defn app
   []
   [:<>
-   [header]
+   [ui/header]
    [pages]
-   [footer]])
+   [ui/footer]])
 
 
 (defn mount [el]

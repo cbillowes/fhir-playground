@@ -11,14 +11,11 @@
 
                                ;; Polylith
                                poly/webapp {:local/root "bases/webapp"}
-                               poly/fhir {:local/root "components/fhir"}}
-                  :main-opts ["-m" "dev.curiousprogrammer.app.server"]}
+                               poly/fhir {:local/root "components/fhir"}}}
 
             :test {:extra-paths ["bases/webapp/test"
                                  "components/fhir/test"]}
 
-            :figwheel {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]
-                       :extra-deps {com.bhauman/figwheel-main {:mvn/version "0.2.20"}}}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polylith/clj-poly {:mvn/version "0.2.21"}}}

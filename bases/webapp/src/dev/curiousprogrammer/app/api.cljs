@@ -11,4 +11,13 @@
 
 
 (def route-fhir-filters (endpoint "fhir/filters"))
-(def route-fhir-patient-search (endpoint "fhir/patients/search"))
+
+(def route-fhir-patient-search (endpoint "fhir/patient-search"))
+
+
+(defn get-csrf-token []
+  (.-content (.querySelector js/document "meta[name='csrf-token']")))
+
+
+(defn get-csrf-header []
+  {"X-Csrf-Token" (get-csrf-token)})

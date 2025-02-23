@@ -3,6 +3,7 @@
             [ring.middleware.file :refer [wrap-file]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
+            [ring.middleware.keyword-params :refer [wrap-keyword-params]]
             [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
             [ring.middleware.session :refer [wrap-session]]
             [ring.adapter.jetty :refer [run-jetty]]
@@ -16,19 +17,24 @@
 
 (defn wrap-logging [handler]
   (fn [request]
-    (logger/info "Request:" (:uri request) (:request-method request))
+    #_(logger/info "Request:" (:uri request) (:request-method request))
     (handler request)))
 
 
-(def app
-  ;; Note that the API routes need to go first because web-routes have a capture all GET /*
-  (-> (-> (routes r/api-routes)
-          (wrap-json-body)
-          (wrap-json-response))
-      (-> (routes r/web-routes)
-          (wrap-defaults site-defaults)
-          (wrap-file "resources/public"))
-      (wrap-anti-forgery)
+(defn app
+  []
+  (-> (routes
+       ;; Note that the API routes need to go first
+       ;; because web-routes have a capture all GET /*
+       (-> (routes r/api-routes)
+           (wrap-anti-forgery)
+           (wrap-json-body)
+           (wrap-json-response)
+           (wrap-keyword-params))
+       (-> (routes r/web-routes)
+           (wrap-file "resources/public")
+           (wrap-anti-forgery)))
+      (wrap-defaults site-defaults)
       (wrap-session)
       (wrap-logging)))
 
@@ -42,7 +48,7 @@
 
 (defn start! []
   (logger/info "Starting backend on port" port "...")
-  (reset! server (run-jetty app {:port port :join? false}))
+  (reset! server (run-jetty (app) {:port port :join? false}))
   (.addShutdownHook (Runtime/getRuntime) (Thread. stop!)))
 
 

@@ -27,35 +27,47 @@
 * phone: A value in a phone contact
 * organization: The organization that is the custodian of the patient record
 * general-practitioner: Patient's nominated general practitioner, not the organization that manages the record"
-  [& {:keys [language last-updated
-             language-code link identifier active?
-             partial-name given-name family-name phonetic-name date-of-birth gender
-             death-date deceased?
-             partial-address city state country postal-code
-             telecom email phone
-             general-practitioner organization]}]
-  (cond-> {}
-    language (assoc "_language" language)
-    last-updated (assoc "_lastUpdated" last-updated)
-    language-code (assoc "language" language-code)
-    link (assoc "link" link)
-    identifier (assoc "identifier" identifier)
-    (true? active?) (assoc "active" (str active?))
-    partial-name (assoc "name" partial-name)
-    given-name (assoc "given" given-name)
-    family-name (assoc "family" family-name)
-    phonetic-name (assoc "phonetic" phonetic-name)
-    date-of-birth (assoc "birthdate" date-of-birth)
-    (true? deceased?) (assoc "deceased" (str deceased?))
-    partial-address (assoc "address" partial-address)
-    city (assoc "address-city" city)
-    state (assoc "address-state" state)
-    country (assoc "address-country" country)
-    postal-code (assoc "address-postalcode" postal-code)
-    gender (assoc "gender" gender)
-    death-date (assoc "death-date" death-date)
-    telecom (assoc "telecom" telecom)
-    email (assoc "email" email)
-    phone (assoc "phone" phone)
-    general-practitioner (assoc "general-practitioner" general-practitioner)
-    organization (assoc "organization" organization)))
+  [data]
+  (let [kvs (->> data
+                 (filter (comp some? val))
+                 (map (fn [[k v]] [(keyword k) v]))
+                 (into {}))
+        {:keys [language last-updated
+                language-code link identifier active?
+                partial-name given-name family-name phonetic-name date-of-birth gender
+                death-date deceased?
+                partial-address city state country postal-code
+                telecom email phone
+                general-practitioner organization]} kvs]
+    (cond-> {}
+      language (assoc "_language" language)
+      last-updated (assoc "_lastUpdated" last-updated)
+      language-code (assoc "language" language-code)
+      link (assoc "link" link)
+      identifier (assoc "identifier" identifier)
+      (true? active?) (assoc "active" (str active?))
+      partial-name (assoc "name" partial-name)
+      given-name (assoc "given" given-name)
+      family-name (assoc "family" family-name)
+      phonetic-name (assoc "phonetic" phonetic-name)
+      date-of-birth (assoc "birthdate" date-of-birth)
+      (true? deceased?) (assoc "deceased" (str deceased?))
+      partial-address (assoc "address" partial-address)
+      city (assoc "address-city" city)
+      state (assoc "address-state" state)
+      country (assoc "address-country" country)
+      postal-code (assoc "address-postalcode" postal-code)
+      gender (assoc "gender" gender)
+      death-date (assoc "death-date" death-date)
+      telecom (assoc "telecom" telecom)
+      email (assoc "email" email)
+      phone (assoc "phone" phone)
+      general-practitioner (assoc "general-practitioner" general-practitioner)
+      organization (assoc "organization" organization))))
+
+
+(comment
+
+  (build-patient-query-for-search {"language" "zulu"})
+
+  )

@@ -1,7 +1,7 @@
 {:ring      {:init    dev.curiousprogrammer.server.core/start-server
              :destroy dev.curiousprogrammer.server.core/stop-server
              :handler dev.curiousprogrammer.server.core/app
-             :port    6003}
+             :port    3000}
 
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
              "clojars" {:url "https://clojars.org/repo"}}
