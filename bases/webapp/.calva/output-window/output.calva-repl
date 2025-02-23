@@ -1,0 +1,30 @@
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "deps.edn" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/samd/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"}}}' -M:dev -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]")
+; Using host:port localhost:50310 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'dev.curiousprogrammer.server.core/-main
+clj꞉dev.curiousprogrammer.server.core꞉> 
+2025-02-23T00:26:58.030Z Titanium.local INFO [dev.curiousprogrammer.server.core:22] - Starting backend on port 3000 ...
+nil
+;
+; [nREPL-session-bf9b5861-2754-4e65-9d5b-8591f7670f1e] INFO org.eclipse.jetty.server.Server - jetty-11.0.24; built: 2024-08-26T18:11:22.448Z; git: 5dfc59a691b748796f922208956bd1f2794bcd16; jvm 17.0.13+0
+;
+; [nREPL-session-bf9b5861-2754-4e65-9d5b-8591f7670f1e] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@63a4f1a4{/,null,AVAILABLE}
+;
+; [nREPL-session-bf9b5861-2754-4e65-9d5b-8591f7670f1e] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1dd55ac3{HTTP/1.1, (http/1.1)}{0.0.0.0:3000}
+;
+; [nREPL-session-bf9b5861-2754-4e65-9d5b-8591f7670f1e] INFO org.eclipse.jetty.server.Server - Started Server@207d9a1d{STARTING}[11.0.24,sto=0] @29555ms
+clj꞉dev.curiousprogrammer.server.core꞉> 

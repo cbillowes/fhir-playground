@@ -1,23 +1,26 @@
 (ns dev.curiousprogrammer.server.core
-  (:require [ring.adapter.jetty :refer [run-jetty]]
-            [compojure.core :refer [routes GET]]
+  (:require [compojure.core :refer [routes]]
             [compojure.route :as route]
-            [taoensso.timbre :as logger]))
+            [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
+            [ring.adapter.jetty :refer [run-jetty]]
+            [taoensso.timbre :as logger]
+            [dev.curiousprogrammer.server.api :as api]))
 
 
 (defonce server (atom nil))
 (def ^:private port 3000)
 
-
-(defn handler [_]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body "Hello from the backend!"})
+(def app
+  (-> (routes
+       api/api-routes
+       (route/not-found {:error "Not Found"}))
+      wrap-json-body
+      wrap-json-response))
 
 
 (defn start-server []
   (logger/info "Starting backend on port" port "...")
-  (reset! server (run-jetty handler {:port port :join? false})))
+  (reset! server (run-jetty app {:port port :join? false})))
 
 
 (defn stop-server []
@@ -30,3 +33,6 @@
 (defn -main [& _]
   (start-server)
   (.addShutdownHook (Runtime/getRuntime) (Thread. stop-server)))
+
+
+(-main)

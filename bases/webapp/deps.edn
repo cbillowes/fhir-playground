@@ -13,6 +13,8 @@
         ring/ring-defaults {:mvn/version "0.6.0"}
         ;; Middleware for serving static files
         ring/ring-servlet {:mvn/version "1.13.0"}
+        ;; Handles JSON requests and responses
+        ring/ring-json {:mvn/version "0.5.1"}
         ;; Enables CORS (for API requests from browsers)
         ring-cors/ring-cors {:mvn/version "0.1.13"}
         ;; Logging middleware
