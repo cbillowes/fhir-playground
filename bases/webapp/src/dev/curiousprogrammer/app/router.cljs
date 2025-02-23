@@ -5,11 +5,12 @@
 
 
 (def default-route :home)
+(def search-route :search)
 
 (def ^{:doc "Defined routes for the application."}
   routes
   ["/" {""       default-route
-        "search" :search
+        "search" search-route
         true     :not-found}])
 
 
