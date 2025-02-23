@@ -1,10 +1,13 @@
 (ns dev.curiousprogrammer.server.core
-  (:require [compojure.core :refer [routes]]
+  (:require [compojure.core :refer [routes defroutes GET]]
             [compojure.route :as route]
+            [ring.middleware.file :refer [wrap-file]]
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
+            [ring.util.response :refer [resource-response]]
             [ring.adapter.jetty :refer [run-jetty]]
             [taoensso.timbre :as logger]
-            [dev.curiousprogrammer.server.api :as api]))
+            [dev.curiousprogrammer.server.routes :as r]))
 
 
 (defonce server (atom nil))
@@ -18,12 +21,15 @@
 
 
 (def app
-  (-> (routes
-       api/api-routes
-       (route/not-found {:error "Not Found"}))
-      wrap-json-body
-      wrap-json-response
-      wrap-logging))
+  ;; Note that the API routes need to go first because web-routes have a capture all GET /*
+  (-> (-> (routes r/api-routes)
+          (wrap-json-body)
+          (wrap-json-response))
+      (-> (routes r/web-routes)
+          (wrap-defaults site-defaults)
+          (wrap-file "resources/public"))
+      (wrap-logging)))
+
 
 
 (defn start-server []
@@ -43,4 +49,13 @@
   (.addShutdownHook (Runtime/getRuntime) (Thread. stop-server)))
 
 
-(-main)
+;;(-main)
+
+(comment
+
+ (do
+   (stop-server)
+   (-main))
+
+
+  )

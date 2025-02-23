@@ -2,12 +2,11 @@
   :css-dirs ["resources/public/css"]
   :auto-testing true
   :auto-bundle :webpack
-  :open-url false
-  #_#_:ring-handler dev.curiousprogrammer.webapp.server/ring-handler}
+  :open-url false}
 {:main dev.curiousprogrammer.app.core
  :output-dir "resources/public/js"
  :asset-path "/js"
  :figwheel {:server-port 9500}
- :devtools {:http-server-root "public"
+ #_#_:devtools {:http-server-root "public"
             :server-port 8080
             :server-proxy "http://localhost:3000"}}

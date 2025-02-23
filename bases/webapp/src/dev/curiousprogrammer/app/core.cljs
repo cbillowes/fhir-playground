@@ -1,35 +1,47 @@
 (ns ^:figwheel-hooks dev.curiousprogrammer.app.core
   (:require [goog.dom :as gdom]
-            [reagent.core :as reagent :refer [atom]]
             [reagent.dom :as rdom]
-            [dev.curiousprogrammer.app.page-patients :as patients]))
-
-
-;; define your app data so that it doesn't get over-written on reload
-(defonce app-state (atom {:text "Hello world!"}))
+            [re-frame.core :as rf]
+            [dev.curiousprogrammer.app.router :as router]
+            [dev.curiousprogrammer.app.pages.home :as home]
+            [dev.curiousprogrammer.app.pages.patients :as patients]
+            [dev.curiousprogrammer.app.pages.not-found :as not-found]
+            ;; Load when evaluating this ns
+            [dev.curiousprogrammer.app.events]
+            [dev.curiousprogrammer.app.subs]))
 
 (defn get-app-element []
   (gdom/getElement "app"))
 
 
-(defn page []
-  (patients/patients-page))
+(defn pages
+  [page-name]
+  (case page-name
+    :home [home/page]
+    :search [patients/page]
+    [not-found/page]))
+
+
+(defn app
+  []
+  (let [active-page @(rf/subscribe [:active-page])]
+    [pages active-page]))
+
+
 
 (defn mount [el]
-  (rdom/render [page] el))
+  (rdom/render app el))
 
-(defn mount-app-element []
+
+(defn init []
+  (router/start!)
   (when-let [el (get-app-element)]
     (mount el)))
 
 ;; conditionally start your application based on the presence of an "app" element
 ;; this is particularly helpful for testing this ns without launching the app
-(mount-app-element)
+(init)
 
 ;; specify reload hook with ^:after-load metadata
 (defn ^:after-load on-reload []
-  (mount-app-element)
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-)
+  (init))

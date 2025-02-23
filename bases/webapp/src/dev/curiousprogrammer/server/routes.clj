@@ -1,6 +1,12 @@
-(ns dev.curiousprogrammer.server.api
+(ns dev.curiousprogrammer.server.routes
   (:require [compojure.core :refer [defroutes GET context]]
-            [ring.util.response :as response]))
+            [compojure.route :as route]
+            [ring.util.response :as response :refer [resource-response]]))
+
+
+(defroutes web-routes
+  (GET "/*" [] (resource-response "index.html" {:root "public"}))
+  (route/not-found "Not Found"))
 
 
 (defroutes api-routes
