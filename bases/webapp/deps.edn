@@ -46,7 +46,9 @@
 
         ;; Logging
         com.taoensso/timbre {:mvn/version "6.6.1"}
-        org.slf4j/slf4j-simple {:mvn/version "2.0.16"}}
+        org.slf4j/slf4j-simple {:mvn/version "2.0.16"}
+
+        poly/fhir {:local/root "../../components/fhir"}}
 
  :aliases {;; Figwheel alias for running ClojureScript development server
            :figwheel {:extra-deps {cider/cider-nrepl {:mvn/version "0.52.0"}

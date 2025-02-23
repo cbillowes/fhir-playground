@@ -6,9 +6,9 @@
 
 
 (rf/reg-sub
- :fhir/filters
+ :fhir/custom-filters
  (fn [db _]
-   (:fhir/filters db)))
+   (:fhir/custom-filters db)))
 
 
 (rf/reg-sub
@@ -24,9 +24,9 @@
 
 
 (rf/reg-sub
- :fhir/filter-list
+ :fhir/available-filters
  (fn [db _]
-   (->> (:fhir/filter-list db)
+   (->> (:fhir/available-filters db)
         (map (fn [filter] {:value (:key filter) :option (:value filter)})))))
 
 
@@ -62,13 +62,13 @@
 (rf/reg-event-db
  :fhir/fetch-filter-success
  (fn [db [_ filters]]
-   (assoc db :fhir/loading? false :fhir/filter-list filters)))
+   (assoc db :fhir/loading? false :fhir/available-filters filters)))
 
 
 (rf/reg-event-db
  :fhir/fetch-filter-failed
  (fn [db [_ _]]
-   (assoc db :fhir/loading? false :fhir/filter-list [])))
+   (assoc db :fhir/loading? false :fhir/available-filters [])))
 
 
 (rf/reg-event-db
@@ -91,28 +91,37 @@
 
 (rf/reg-event-db
  :fhir/store-filter
- (fn [db [_ _]]
-   (js/console.log db)
-   (when (and (:fhir/filter-by db)
-              (:fhir/filter-value db))
-     (assoc db :fhir/filters (-> (:fhir/filters db)
-                                 (conj {:by (:fhir/filter-by db) :value (:fhir/filter-value db)})
-                                 (distinct))))))
+ (fn [db [_ key value]]
+   (let [filters (->> (:fhir/custom-filters db)
+                      (filter #(= value (get % key)))
+                      (distinct))]
+     (assoc db :fhir/custom-filters (conj filters {:by (:fhir/filter-by db) :value (:fhir/filter-value db)})))))
 
 
 (rf/reg-event-db
  :fhir/remove-filter
   (fn [db [_ filter]]
-    (assoc db :fhir/filters (remove #(= filter %) (:fhir/filters db)))))
+    (assoc db :fhir/custom-filters (remove #(= filter %) (:fhir/custom-filters db)))))
+
+
+(rf/reg-event-fx
+ :fhir/search-patients
+ (fn [{:keys [db]} _]
+   {:db (assoc db :fhir/loading? true :fhir/error nil)
+    :http-xhrio {:method          :post
+                 :uri             api/route-fhir-patient-search
+                 :response-format (ajax/json-response-format {:keywords? true})
+                 #_#_#_:on-success      [:fhir/fetch-filter-success]
+                 :on-failure      [:fhir/fetch-filter-failed]}}))
 
 
 
 (defn page
   []
-  (let [filter-list @(rf/subscribe [:fhir/filter-list])
-        filters @(rf/subscribe [:fhir/filters])
-        filter-by-field @(rf/subscribe [:fhir/filter-by-field])
-        filter-value-field @(rf/subscribe [:fhir/filter-value-field])]
+  (let [available-filters @(rf/subscribe [:fhir/available-filters])
+        custom-filters @(rf/subscribe [:fhir/custom-filters])
+        filter-by @(rf/subscribe [:fhir/filter-by-field])
+        filter-value @(rf/subscribe [:fhir/filter-value-field])]
     [:div {:class "my-8 max-w-4xl w-2/3 mx-auto text-center text-white leading-relaxed"}
      [:h1.font-bold.my-2.text-4xl "🤒 Search for Patients"]
      [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
@@ -121,18 +130,22 @@
        [:div.flex.mb-4.items-stretch
         [:div.grow
          [:div.flex.gap-4.w-full
-          (when (seq filter-list)
-            [ui/selectbox "Search by:" filter-list
+          (when (seq available-filters)
+            [ui/selectbox "Search by:" available-filters
              :title-class "text-red-900"
              :class "w-1/2"
-             :selected-value filter-by-field
-             :on-change #(rf/dispatch [:fhir/filter-by %])])
+             :selected-value filter-by
+             :on-change (fn [value]
+                          (rf/dispatch [:fhir/filter-by value])
+                          (rf/dispatch [:fhir/store-filter :by value]))])
           [ui/textbox "Search value:"
            :class "w-1/2"
            :title-class "text-red-900"
-           :default-value filter-value-field
-           :on-change #(rf/dispatch [:fhir/filter-value %])]]]
-        (when (seq filter-list)
+           :default-value filter-value
+           :on-change (fn [value]
+                        (rf/dispatch [:fhir/filter-value value])
+                        (rf/dispatch [:fhir/store-filter :value value]))]]]
+        (when (seq available-filters)
           [:div.flex
            [ui/button "➕"
             :class "ml-4 w-16 bg-green-400 text-green-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer flex-none block"
@@ -143,10 +156,9 @@
             :title "Clear filters"
             :on-click #(rf/dispatch [:fhir/clear-filter-fields])]])]
        [ui/button "Search" :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer"]
-       (when (seq filters)
-         (js/console.log filters)
+       (when (seq custom-filters)
          [:div.mt-2.flex.flex-wrap
-          (for [filter filters]
+          (for [filter custom-filters]
             [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-800
              (:by filter) " : " (:value filter)
              [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/remove-filter filter])]])])]]]))

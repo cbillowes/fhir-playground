@@ -9,7 +9,7 @@
 ;; https://hapi.fhir.org/baseR4/api-docs
 ;; /Composition/{id}/$document: get
 (defn fetch-patients [page page-size & [query]]
-  (gaurd/validate-page-index page)
+  (guard/validate-page-index page)
   (guard/validate-page-size page-size)
   (let [url (str fhir-base-url "/Patient")
         response (client/get url

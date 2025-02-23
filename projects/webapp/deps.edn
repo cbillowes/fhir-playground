@@ -1,0 +1,24 @@
+{:ring      {:init    dev.curiousprogrammer.server.core/start-server
+             :destroy dev.curiousprogrammer.server.core/stop-server
+             :handler dev.curiousprogrammer.server.core/app
+             :port    6003}
+
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo"}}
+
+ :deps      {poly/fhir     {:local/root "../../components/fhir"}
+             poly/webapp   {:local/root "../../bases/webapp"}
+
+             org.clojure/clojure {:mvn/version "1.12.0"}}
+
+ :aliases   {:test    {:extra-paths []
+                       :extra-deps  {org.clojure/test.check {:mvn/version "1.1.1"}}}
+
+             :uberjar {:main dev.curiousprogrammer.server.core}
+
+             :ring {:extra-deps {org.slf4j/slf4j-nop {:mvn/version "2.0.3"}
+                                 furkan3ayraktar/polylith-clj-deps-ring {:git/url   "https://github.com/furkan3ayraktar/polylith-clj-deps-ring.git"
+                                                                         :sha       "7bb68846bb8a200a486a2886f1af95984538ec25"
+                                                                         :deps/root "projects/core"}}
+
+                    :main-opts  ["-m" "polylith.clj-deps-ring.cli.main" "start"]}}}

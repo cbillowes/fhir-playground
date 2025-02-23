@@ -29,31 +29,31 @@
       (wrap-logging)))
 
 
-
-(defn start-server []
-  (logger/info "Starting backend on port" port "...")
-  (reset! server (run-jetty app {:port port :join? false})))
-
-
-(defn stop-server []
+(defn stop! []
   (when @server
     (logger/info "Stopping backend...")
     (.stop @server)
     (reset! server nil)))
 
 
+(defn start! []
+  (logger/info "Starting backend on port" port "...")
+  (reset! server (run-jetty app {:port port :join? false}))
+  (.addShutdownHook (Runtime/getRuntime) (Thread. stop!)))
+
+
+
+(defn restart! []
+  (stop!)
+  (start!))
+
+
 (defn -main [& _]
-  (start-server)
-  (.addShutdownHook (Runtime/getRuntime) (Thread. stop-server)))
+  (start!))
 
-
-;;(-main)
 
 (comment
 
- (do
-   (stop-server)
-   (-main))
+ (restart!)
 
-
-  )
+  :rcf)

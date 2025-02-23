@@ -323,3 +323,1084 @@
 ; 2025-02-23T07:42:46.485Z Titanium.local INFO [dev.curiousprogrammer.server.core:19] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
 ; 2025-02-23T07:42:47.584Z Titanium.local INFO [dev.curiousprogrammer.server.core:19] - Request: /api/fhir/filters :get
 ; 2025-02-23T07:42:48.261Z Titanium.local INFO [dev.curiousprogrammer.server.core:19] - Request: /mockServiceWorker.js :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.42 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:49:01.581Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:49:01.595Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:49:01.599Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:49:01.610Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:49:01.631Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:49:01.632Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.375 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:49:14.296Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:49:14.309Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:49:14.310Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:49:14.340Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:49:14.340Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:49:14.353Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.358 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:49:24.203Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:49:24.221Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:49:24.222Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:49:24.239Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:49:24.239Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:49:24.239Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.475 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:50:15.209Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:50:15.221Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:50:15.223Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:50:15.249Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:50:15.255Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:50:15.255Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.344 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:50:20.499Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:50:20.512Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:50:20.516Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:50:20.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:50:20.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:50:20.528Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.466 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:50:48.415Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:50:48.426Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:50:48.429Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:50:48.436Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:50:48.451Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:50:48.451Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.423 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:52:46.659Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:52:46.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:52:46.682Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:52:46.712Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:52:46.735Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:52:46.737Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.472 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:55:27.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:55:27.166Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:55:27.169Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:55:27.200Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:55:27.205Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:55:27.244Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.421 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:56:28.329Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:56:28.344Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:56:28.346Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:56:28.366Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:56:28.366Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:56:28.375Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.315 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:56:32.026Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:56:32.032Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:56:32.033Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:56:32.046Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:56:32.046Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:56:32.052Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.284 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:56:42.893Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:56:42.899Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:56:42.899Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:56:42.915Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:56:42.915Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:56:42.915Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.372 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:57:13.307Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:57:13.315Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:57:13.316Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:57:13.327Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:57:13.338Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:57:13.338Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:57:14.264Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /search :get
+; 2025-02-23T10:57:14.308Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/main_bundle.js :get
+; 2025-02-23T10:57:14.308Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /css/style.min.css :get
+; 2025-02-23T10:57:14.406Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/base.js :get
+; 2025-02-23T10:57:14.406Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs_deps.js :get
+; 2025-02-23T10:57:14.406Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/deps.js :get
+; 2025-02-23T10:57:14.453Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/error.js :get
+; 2025-02-23T10:57:14.454Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/nodetype.js :get
+; 2025-02-23T10:57:14.455Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/asserts/asserts.js :get
+; 2025-02-23T10:57:14.457Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/htmlelement.js :get
+; 2025-02-23T10:57:14.463Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/tagname.js :get
+; 2025-02-23T10:57:14.463Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/element.js :get
+; 2025-02-23T10:57:14.472Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/asserts.js :get
+; 2025-02-23T10:57:14.473Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/asserts/dom.js :get
+; 2025-02-23T10:57:14.473Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/functions/functions.js :get
+; 2025-02-23T10:57:14.472Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/const.js :get
+; 2025-02-23T10:57:14.475Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/typedstring.js :get
+; 2025-02-23T10:57:14.475Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/trustedtypes.js :get
+; 2025-02-23T10:57:14.487Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/fs/url.js :get
+; 2025-02-23T10:57:14.486Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safescript.js :get
+; 2025-02-23T10:57:14.491Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/trustedresourceurl.js :get
+; 2025-02-23T10:57:14.492Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safeurl.js :get
+; 2025-02-23T10:57:14.496Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/flags/flags.js :get
+; 2025-02-23T10:57:14.491Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/internal.js :get
+; 2025-02-23T10:57:14.496Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/fs/blob.js :get
+; 2025-02-23T10:57:14.499Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safestylesheet.js :get
+; 2025-02-23T10:57:14.500Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/highentropy/highentropydata.js :get
+; 2025-02-23T10:57:14.500Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/object/object.js :get
+; 2025-02-23T10:57:14.500Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/util.js :get
+; 2025-02-23T10:57:14.500Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/useragent.js :get
+; 2025-02-23T10:57:14.502Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/tags.js :get
+; 2025-02-23T10:57:14.503Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/highentropy/highentropyvalue.js :get
+; 2025-02-23T10:57:14.504Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/browser.js :get
+; 2025-02-23T10:57:14.502Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safestyle.js :get
+; 2025-02-23T10:57:14.505Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/array/array.js :get
+; 2025-02-23T10:57:14.509Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/relativetimeprovider.js :get
+; 2025-02-23T10:57:14.509Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safehtml.js :get
+; 2025-02-23T10:57:14.509Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/errorcontext.js :get
+; 2025-02-23T10:57:14.511Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/uncheckedconversions.js :get
+; 2025-02-23T10:57:14.511Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/debug.js :get
+; 2025-02-23T10:57:14.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/log/log.js :get
+; 2025-02-23T10:57:14.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/console.js :get
+; 2025-02-23T10:57:14.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/safe.js :get
+; 2025-02-23T10:57:14.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/collections/maps.js :get
+; 2025-02-23T10:57:14.523Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/uri/utils.js :get
+; 2025-02-23T10:57:14.526Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/formatter.js :get
+; 2025-02-23T10:57:14.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/structs.js :get
+; 2025-02-23T10:57:14.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/reflect/reflect.js :get
+; 2025-02-23T10:57:14.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/core.js :get
+; 2025-02-23T10:57:14.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/string.js :get
+; 2025-02-23T10:57:14.532Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/dispose.js :get
+; 2025-02-23T10:57:14.532Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/uri/uri.js :get
+; 2025-02-23T10:57:14.533Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/idisposable.js :get
+; 2025-02-23T10:57:14.531Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/stringbuffer.js :get
+; 2025-02-23T10:57:14.533Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/integer.js :get
+; 2025-02-23T10:57:14.538Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/disposeall.js :get
+; 2025-02-23T10:57:14.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/entrypointregistry.js :get
+; 2025-02-23T10:57:14.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/long.js :get
+; 2025-02-23T10:57:14.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventid.js :get
+; 2025-02-23T10:57:14.548Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/engine.js :get
+; 2025-02-23T10:57:14.548Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/useragent/useragent.js :get
+; 2025-02-23T10:57:14.548Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/event.js :get
+; 2025-02-23T10:57:14.542Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/browserfeature.js :get
+; 2025-02-23T10:57:14.551Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtypehelpers.js :get
+; 2025-02-23T10:57:14.552Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/platform.js :get
+; 2025-02-23T10:57:14.551Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/disposable.js :get
+; 2025-02-23T10:57:14.552Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listener.js :get
+; 2025-02-23T10:57:14.552Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenablekey.js :get
+; 2025-02-23T10:57:14.555Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/browserfeature.js :get
+; 2025-02-23T10:57:14.555Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtype.js :get
+; 2025-02-23T10:57:14.556Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/math.js :get
+; 2025-02-23T10:57:14.556Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/browserevent.js :get
+; 2025-02-23T10:57:14.556Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenable.js :get
+; 2025-02-23T10:57:14.557Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/events.js :get
+; 2025-02-23T10:57:14.558Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/size.js :get
+; 2025-02-23T10:57:14.559Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenermap.js :get
+; 2025-02-23T10:57:14.568Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtarget.js :get
+; 2025-02-23T10:57:14.568Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/dom.js :get
+; 2025-02-23T10:57:14.568Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/coordinate.js :get
+; 2025-02-23T10:57:14.568Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/dataset.js :get
+; 2025-02-23T10:57:14.569Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/pprint.js :get
+; 2025-02-23T10:57:14.570Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/useragent/product.js :get
+; 2025-02-23T10:57:14.574Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/thenable.js :get
+; 2025-02-23T10:57:14.575Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/asyncstacktag.js :get
+; 2025-02-23T10:57:14.575Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/string.js :get
+; 2025-02-23T10:57:14.575Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/freelist.js :get
+; 2025-02-23T10:57:14.574Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/workqueue.js :get
+; 2025-02-23T10:57:14.578Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/throwexception.js :get
+; 2025-02-23T10:57:14.578Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/nexttick.js :get
+; 2025-02-23T10:57:14.578Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/resolver.js :get
+; 2025-02-23T10:57:14.578Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/run.js :get
+; 2025-02-23T10:57:14.578Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/promise.js :get
+; 2025-02-23T10:57:14.581Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/stringformat.js :get
+; 2025-02-23T10:57:14.581Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/set.js :get
+; 2025-02-23T10:57:14.582Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/tools/heads_up.js :get
+; 2025-02-23T10:57:14.582Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/mochikit/async/deferred.js :get
+; 2025-02-23T10:57:14.583Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/core.js :get
+; 2025-02-23T10:57:14.601Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/core.js.map :get
+; 2025-02-23T10:57:14.646Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/pprint.js.map :get
+; 2025-02-23T10:57:14.646Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/string.js.map :get
+; 2025-02-23T10:57:14.646Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main.js :get
+; 2025-02-23T10:57:14.646Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/tools/heads_up.js.map :get
+; 2025-02-23T10:57:14.649Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/set.js.map :get
+; 2025-02-23T10:57:14.653Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/core.js.map :get
+; 2025-02-23T10:57:14.653Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main.js.map :get
+; 2025-02-23T10:57:14.657Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/timer/timer.js :get
+; 2025-02-23T10:57:14.658Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/json/json.js :get
+; 2025-02-23T10:57:14.660Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/json/hybrid.js :get
+; 2025-02-23T10:57:14.662Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/httpstatus.js :get
+; 2025-02-23T10:57:14.660Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/errorcode.js :get
+; 2025-02-23T10:57:14.662Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/eventtype.js :get
+; 2025-02-23T10:57:14.669Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xmlhttpfactory.js :get
+; 2025-02-23T10:57:14.668Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/wrapperxmlhttpfactory.js :get
+; 2025-02-23T10:57:14.669Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrlike.js :get
+; 2025-02-23T10:57:14.671Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xmlhttp.js :get
+; 2025-02-23T10:57:14.671Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/errorcode.js :get
+; 2025-02-23T10:57:14.671Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/iter/iter.js :get
+; 2025-02-23T10:57:14.671Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrio.js :get
+; 2025-02-23T10:57:14.674Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/iter/es6.js :get
+; 2025-02-23T10:57:14.674Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/iterablemechanism.js :get
+; 2025-02-23T10:57:14.674Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/mechanism.js :get
+; 2025-02-23T10:57:14.674Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5webstorage.js :get
+; 2025-02-23T10:57:14.675Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5sessionstorage.js :get
+; 2025-02-23T10:57:14.675Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/jsloader.js :get
+; 2025-02-23T10:57:14.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/legacyconversions.js :get
+; 2025-02-23T10:57:14.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/ieuserdata.js :get
+; 2025-02-23T10:57:14.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/prefixedmechanism.js :get
+; 2025-02-23T10:57:14.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/collections/iters.js :get
+; 2025-02-23T10:57:14.680Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/mechanismfactory.js :get
+; 2025-02-23T10:57:14.682Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/websocket.js :get
+; 2025-02-23T10:57:14.682Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5localstorage.js :get
+; 2025-02-23T10:57:14.682Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/logging.js :get
+; 2025-02-23T10:57:14.682Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/map.js :get
+; 2025-02-23T10:57:14.683Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl.js :get
+; 2025-02-23T10:57:14.684Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/preload.js :get
+; 2025-02-23T10:57:14.747Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/protocols.js :get
+; 2025-02-23T10:57:14.751Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/state.js :get
+; 2025-02-23T10:57:14.751Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/printing.js :get
+; 2025-02-23T10:57:14.751Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/munging.js :get
+; 2025-02-23T10:57:14.752Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/defaults.js :get
+; 2025-02-23T10:57:14.752Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/version.js :get
+; 2025-02-23T10:57:14.751Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/context.js :get
+; 2025-02-23T10:57:14.756Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/format.js :get
+; 2025-02-23T10:57:14.759Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/prefs.js :get
+; 2025-02-23T10:57:14.760Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/markup.js :get
+; 2025-02-23T10:57:14.761Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/async.js :get
+; 2025-02-23T10:57:14.761Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/util.js :get
+; 2025-02-23T10:57:14.760Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/data.js :get
+; 2025-02-23T10:57:14.761Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/helpers.js :get
+; 2025-02-23T10:57:14.763Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/budgeting.js :get
+; 2025-02-23T10:57:14.764Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/walk.js :get
+; 2025-02-23T10:57:14.763Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/templating.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/toolbox.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/core.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/core.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/reporter.js :get
+; 2025-02-23T10:57:14.770Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/stacktrace.js :get
+; 2025-02-23T10:57:14.773Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/hints.js :get
+; 2025-02-23T10:57:14.784Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/protocols.js.map :get
+; 2025-02-23T10:57:14.784Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl.js.map :get
+; 2025-02-23T10:57:14.784Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/preload.js.map :get
+; 2025-02-23T10:57:14.785Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/logging.js.map :get
+; 2025-02-23T10:57:14.785Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/preload.js :get
+; 2025-02-23T10:57:14.786Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/context.js.map :get
+; 2025-02-23T10:57:14.787Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/format.js.map :get
+; 2025-02-23T10:57:14.793Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/prefs.js.map :get
+; 2025-02-23T10:57:14.792Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/defaults.js.map :get
+; 2025-02-23T10:57:14.793Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/helpers.js.map :get
+; 2025-02-23T10:57:14.793Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/munging.js.map :get
+; 2025-02-23T10:57:14.794Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/system_exit.js :get
+; 2025-02-23T10:57:14.799Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/version.js.map :get
+; 2025-02-23T10:57:14.799Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/data.js.map :get
+; 2025-02-23T10:57:14.799Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/walk.js.map :get
+; 2025-02-23T10:57:14.799Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/printing.js.map :get
+; 2025-02-23T10:57:14.799Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/state.js.map :get
+; 2025-02-23T10:57:14.800Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/util.js.map :get
+; 2025-02-23T10:57:14.802Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/templating.js.map :get
+; 2025-02-23T10:57:14.802Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/cssom/cssom.js :get
+; 2025-02-23T10:57:14.802Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/css_reload.js :get
+; 2025-02-23T10:57:14.802Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/markup.js.map :get
+; 2025-02-23T10:57:14.814Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/reporter.js.map :get
+; 2025-02-23T10:57:14.814Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/async.js.map :get
+; 2025-02-23T10:57:14.815Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/core.js.map :get
+; 2025-02-23T10:57:14.814Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/budgeting.js.map :get
+; 2025-02-23T10:57:14.815Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/core.js.map :get
+; 2025-02-23T10:57:14.815Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/process/env.js :get
+; 2025-02-23T10:57:14.815Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/toolbox.js.map :get
+; 2025-02-23T10:57:14.817Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters.js.map :get
+; 2025-02-23T10:57:14.821Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/hints.js.map :get
+; 2025-02-23T10:57:14.859Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/batching.js :get
+; 2025-02-23T10:57:14.861Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/protocols.js :get
+; 2025-02-23T10:57:14.861Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/debug.js :get
+; 2025-02-23T10:57:14.849Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/util.js :get
+; 2025-02-23T10:57:14.861Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/stacktrace.js.map :get
+; 2025-02-23T10:57:14.865Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/ratom.js :get
+; 2025-02-23T10:57:14.914Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/template.js :get
+; 2025-02-23T10:57:14.917Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/dom.js :get
+; 2025-02-23T10:57:14.917Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/component.js :get
+; 2025-02-23T10:57:14.928Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/input.js :get
+; 2025-02-23T10:57:14.931Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interop.js :get
+; 2025-02-23T10:57:14.932Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/core.js :get
+; 2025-02-23T10:57:14.944Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/loggers.js :get
+; 2025-02-23T10:57:14.946Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/router.js :get
+; 2025-02-23T10:57:14.946Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/trace.js :get
+; 2025-02-23T10:57:14.959Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/settings.js :get
+; 2025-02-23T10:57:14.959Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interceptor.js :get
+; 2025-02-23T10:57:14.961Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/registrar.js :get
+; 2025-02-23T10:57:14.984Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/events.js :get
+; 2025-02-23T10:57:15.003Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/event.js :get
+; 2025-02-23T10:57:15.006Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/inputtype.js :get
+; 2025-02-23T10:57:15.007Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/fx.js :get
+; 2025-02-23T10:57:14.965Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/subs.js :get
+; 2025-02-23T10:57:14.989Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/std_interceptors.js :get
+; 2025-02-23T10:57:15.014Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/cofx.js :get
+; 2025-02-23T10:57:14.974Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/utils.js :get
+; 2025-02-23T10:57:14.986Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/db.js :get
+; 2025-02-23T10:57:15.067Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/device.js :get
+; 2025-02-23T10:57:15.076Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventhandler.js :get
+; 2025-02-23T10:57:15.080Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/bidi/bidi.js :get
+; 2025-02-23T10:57:15.083Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/core.js :get
+; 2025-02-23T10:57:15.085Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/html5history.js :get
+; 2025-02-23T10:57:15.098Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/pushy/core.js :get
+; 2025-02-23T10:57:15.098Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/history.js :get
+; 2025-02-23T10:57:15.089Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/eventtype.js :get
+; 2025-02-23T10:57:15.110Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/url.js :get
+; 2025-02-23T10:57:15.101Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/util.js :get
+; 2025-02-23T10:57:15.118Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/router.js :get
+; 2025-02-23T10:57:15.126Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/home.js :get
+; 2025-02-23T10:57:15.140Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/interceptors.js :get
+; 2025-02-23T10:57:15.152Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/memoize/memoize.js :get
+; 2025-02-23T10:57:15.145Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/formats.js :get
+; 2025-02-23T10:57:15.146Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/protocols.js :get
+; 2025-02-23T10:57:15.174Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/eq.js :get
+; 2025-02-23T10:57:15.180Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/util.js :get
+; 2025-02-23T10:57:15.191Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/types.js :get
+; 2025-02-23T10:57:15.199Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/decoder.js :get
+; 2025-02-23T10:57:15.189Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xml_http_request.js :get
+; 2025-02-23T10:57:15.201Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/caching.js :get
+; 2025-02-23T10:57:15.202Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/delimiters.js :get
+; 2025-02-23T10:57:15.219Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/reader.js :get
+; 2025-02-23T10:57:15.223Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/handlers.js :get
+; 2025-02-23T10:57:15.236Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cognitect/transit.js :get
+; 2025-02-23T10:57:15.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/ring.js :get
+; 2025-02-23T10:57:15.245Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/writer.js :get
+; 2025-02-23T10:57:15.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/collection.js :get
+; 2025-02-23T10:57:15.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit.js :get
+; 2025-02-23T10:57:15.260Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/set.js :get
+; 2025-02-23T10:57:15.268Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/transit.js :get
+; 2025-02-23T10:57:15.268Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/node.js :get
+; 2025-02-23T10:57:15.291Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/simple.js :get
+; 2025-02-23T10:57:15.307Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/prioritypool.js :get
+; 2025-02-23T10:57:15.283Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/priorityqueue.js :get
+; 2025-02-23T10:57:15.283Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/json.js :get
+; 2025-02-23T10:57:15.269Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/easy.js :get
+; 2025-02-23T10:57:15.323Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/queue.js :get
+; 2025-02-23T10:57:15.327Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/heap.js :get
+; 2025-02-23T10:57:15.327Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/pool.js :get
+; 2025-02-23T10:57:15.327Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrmanager.js :get
+; 2025-02-23T10:57:15.327Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhriopool.js :get
+; 2025-02-23T10:57:15.341Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xhrio.js :get
+; 2025-02-23T10:57:15.341Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.js :get
+; 2025-02-23T10:57:15.342Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/not_found.js :get
+; 2025-02-23T10:57:15.346Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/day8/re_frame/http_fx.js :get
+; 2025-02-23T10:57:15.347Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/events.js :get
+; 2025-02-23T10:57:15.341Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/core.js :get
+; 2025-02-23T10:57:15.341Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/api.js :get
+; 2025-02-23T10:57:15.346Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:57:15.352Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/css_reload.js.map :get
+; 2025-02-23T10:57:15.352Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:57:15.352Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/system_exit.js.map :get
+; 2025-02-23T10:57:15.352Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/preload.js.map :get
+; 2025-02-23T10:57:15.351Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.js :get
+; 2025-02-23T10:57:15.362Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/debug.js.map :get
+; 2025-02-23T10:57:15.362Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/util.js.map :get
+; 2025-02-23T10:57:15.364Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/protocols.js.map :get
+; 2025-02-23T10:57:15.364Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/batching.js.map :get
+; 2025-02-23T10:57:15.361Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/process/env.js.map :get
+; 2025-02-23T10:57:15.369Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/ratom.js.map :get
+; 2025-02-23T10:57:15.376Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/component.js.map :get
+; 2025-02-23T10:57:15.391Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:57:15.391Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/input.js.map :get
+; 2025-02-23T10:57:15.410Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/template.js.map :get
+; 2025-02-23T10:57:15.473Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interop.js.map :get
+; 2025-02-23T10:57:15.473Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/dom.js.map :get
+; 2025-02-23T10:57:15.475Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/core.js.map :get
+; 2025-02-23T10:57:15.489Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/loggers.js.map :get
+; 2025-02-23T10:57:15.490Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/trace.js.map :get
+; 2025-02-23T10:57:15.491Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/registrar.js.map :get
+; 2025-02-23T10:57:15.490Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/settings.js.map :get
+; 2025-02-23T10:57:15.507Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/utils.js.map :get
+; 2025-02-23T10:57:15.509Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interceptor.js.map :get
+; 2025-02-23T10:57:15.510Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/events.js.map :get
+; 2025-02-23T10:57:15.510Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/db.js.map :get
+; 2025-02-23T10:57:15.510Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/fx.js.map :get
+; 2025-02-23T10:57:15.513Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/router.js.map :get
+; 2025-02-23T10:57:15.514Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/cofx.js.map :get
+; 2025-02-23T10:57:15.516Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/std_interceptors.js.map :get
+; 2025-02-23T10:57:15.517Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/subs.js.map :get
+; 2025-02-23T10:57:15.517Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/core.js.map :get
+; 2025-02-23T10:57:15.517Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/bidi/bidi.js.map :get
+; 2025-02-23T10:57:15.524Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/router.js.map :get
+; 2025-02-23T10:57:15.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/pushy/core.js.map :get
+; 2025-02-23T10:57:15.528Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/home.js.map :get
+; 2025-02-23T10:57:15.528Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/util.js.map :get
+; 2025-02-23T10:57:15.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/protocols.js.map :get
+; 2025-02-23T10:57:15.527Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/url.js.map :get
+; 2025-02-23T10:57:15.529Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/interceptors.js.map :get
+; 2025-02-23T10:57:15.532Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/formats.js.map :get
+; 2025-02-23T10:57:15.533Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xml_http_request.js.map :get
+; 2025-02-23T10:57:15.538Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cognitect/transit.js.map :get
+; 2025-02-23T10:57:15.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/simple.js.map :get
+; 2025-02-23T10:57:15.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/transit.js.map :get
+; 2025-02-23T10:57:15.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/ring.js.map :get
+; 2025-02-23T10:57:15.540Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/json.js.map :get
+; 2025-02-23T10:57:15.543Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/easy.js.map :get
+; 2025-02-23T10:57:15.548Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xhrio.js.map :get
+; 2025-02-23T10:57:15.549Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/core.js.map :get
+; 2025-02-23T10:57:15.552Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.js.map :get
+; 2025-02-23T10:57:15.552Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/api.js.map :get
+; 2025-02-23T10:57:15.553Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:57:15.553Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/not_found.js.map :get
+; 2025-02-23T10:57:15.553Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/day8/re_frame/http_fx.js.map :get
+; 2025-02-23T10:57:15.553Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/events.js.map :get
+; 2025-02-23T10:57:15.558Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.js.map :get
+; 2025-02-23T10:57:15.559Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:57:15.632Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.cljs :get
+; 2025-02-23T10:57:15.679Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.cljs :get
+; 2025-02-23T10:57:42.483Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cider/nrepl/inlined/deps/suitable/v0v6v2/suitable/js_introspection.js :get
+; 2025-02-23T10:57:42.491Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cider/nrepl/inlined/deps/suitable/v0v6v2/suitable/js_introspection.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.438 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:57:57.560Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:57:57.570Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:57:57.572Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:57:57.597Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:57:57.604Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:57:57.606Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.28 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:58:03.916Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:58:03.923Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:58:03.923Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:58:03.933Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:58:03.949Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:58:03.950Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.508 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:59:03.477Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:59:03.493Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:59:03.493Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:59:03.505Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:59:03.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:59:03.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.513 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T10:59:33.705Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T10:59:33.714Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T10:59:33.714Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T10:59:33.725Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T10:59:33.741Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T10:59:33.741Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.51 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T11:00:10.829Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T11:00:10.844Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T11:00:10.845Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T11:00:10.880Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:00:10.881Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:00:10.889Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.411 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T11:00:33.725Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T11:00:33.733Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T11:00:33.733Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T11:00:33.755Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T11:00:33.756Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:00:33.757Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 0.421 seconds.
+; [Figwheel] Outputting main file: resources/public/js/main-auto-testing.js
+; 2025-02-23T11:00:52.328Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T11:00:52.336Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T11:00:52.336Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T11:00:52.356Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T11:00:52.361Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:00:52.362Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:01:08.907Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /search :get
+; 2025-02-23T11:01:08.965Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/main_bundle.js :get
+; 2025-02-23T11:01:08.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /css/style.min.css :get
+; 2025-02-23T11:01:09.069Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/base.js :get
+; 2025-02-23T11:01:09.069Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs_deps.js :get
+; 2025-02-23T11:01:09.069Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/deps.js :get
+; 2025-02-23T11:01:09.120Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/error.js :get
+; 2025-02-23T11:01:09.122Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/nodetype.js :get
+; 2025-02-23T11:01:09.122Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/asserts/asserts.js :get
+; 2025-02-23T11:01:09.130Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/tagname.js :get
+; 2025-02-23T11:01:09.130Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/element.js :get
+; 2025-02-23T11:01:09.131Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/htmlelement.js :get
+; 2025-02-23T11:01:09.133Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/asserts/dom.js :get
+; 2025-02-23T11:01:09.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/asserts.js :get
+; 2025-02-23T11:01:09.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/const.js :get
+; 2025-02-23T11:01:09.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/functions/functions.js :get
+; 2025-02-23T11:01:09.142Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/typedstring.js :get
+; 2025-02-23T11:01:09.142Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safescript.js :get
+; 2025-02-23T11:01:09.142Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/trustedtypes.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safestyle.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/fs/url.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/fs/blob.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/internal.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/trustedresourceurl.js :get
+; 2025-02-23T11:01:09.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safeurl.js :get
+; 2025-02-23T11:01:09.168Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safestylesheet.js :get
+; 2025-02-23T11:01:09.168Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/object/object.js :get
+; 2025-02-23T11:01:09.169Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/useragent.js :get
+; 2025-02-23T11:01:09.171Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/util.js :get
+; 2025-02-23T11:01:09.174Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/highentropy/highentropyvalue.js :get
+; 2025-02-23T11:01:09.175Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/tags.js :get
+; 2025-02-23T11:01:09.175Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/browser.js :get
+; 2025-02-23T11:01:09.175Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/highentropy/highentropydata.js :get
+; 2025-02-23T11:01:09.175Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/flags/flags.js :get
+; 2025-02-23T11:01:09.177Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/uncheckedconversions.js :get
+; 2025-02-23T11:01:09.181Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/array/array.js :get
+; 2025-02-23T11:01:09.183Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/errorcontext.js :get
+; 2025-02-23T11:01:09.181Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/safe.js :get
+; 2025-02-23T11:01:09.183Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/safehtml.js :get
+; 2025-02-23T11:01:09.185Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/relativetimeprovider.js :get
+; 2025-02-23T11:01:09.183Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/string.js :get
+; 2025-02-23T11:01:09.190Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/debug.js :get
+; 2025-02-23T11:01:09.190Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/log/log.js :get
+; 2025-02-23T11:01:09.190Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/structs.js :get
+; 2025-02-23T11:01:09.190Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/formatter.js :get
+; 2025-02-23T11:01:09.191Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/collections/maps.js :get
+; 2025-02-23T11:01:09.197Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/uri/uri.js :get
+; 2025-02-23T11:01:09.197Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/console.js :get
+; 2025-02-23T11:01:09.197Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/integer.js :get
+; 2025-02-23T11:01:09.198Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/uri/utils.js :get
+; 2025-02-23T11:01:09.201Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/reflect/reflect.js :get
+; 2025-02-23T11:01:09.202Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/long.js :get
+; 2025-02-23T11:01:09.205Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/dispose.js :get
+; 2025-02-23T11:01:09.206Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/stringbuffer.js :get
+; 2025-02-23T11:01:09.202Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/core.js :get
+; 2025-02-23T11:01:09.206Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/entrypointregistry.js :get
+; 2025-02-23T11:01:09.211Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventid.js :get
+; 2025-02-23T11:01:09.211Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/disposeall.js :get
+; 2025-02-23T11:01:09.211Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/idisposable.js :get
+; 2025-02-23T11:01:09.215Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/event.js :get
+; 2025-02-23T11:01:09.215Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/disposable/disposable.js :get
+; 2025-02-23T11:01:09.215Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/useragent/useragent.js :get
+; 2025-02-23T11:01:09.217Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/engine.js :get
+; 2025-02-23T11:01:09.218Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtypehelpers.js :get
+; 2025-02-23T11:01:09.221Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtype.js :get
+; 2025-02-23T11:01:09.221Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/browserfeature.js :get
+; 2025-02-23T11:01:09.221Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/platform.js :get
+; 2025-02-23T11:01:09.220Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listener.js :get
+; 2025-02-23T11:01:09.225Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/browserevent.js :get
+; 2025-02-23T11:01:09.230Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/events.js :get
+; 2025-02-23T11:01:09.230Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenable.js :get
+; 2025-02-23T11:01:09.236Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenablekey.js :get
+; 2025-02-23T11:01:09.237Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/listenermap.js :get
+; 2025-02-23T11:01:09.240Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/pprint.js :get
+; 2025-02-23T11:01:09.240Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/size.js :get
+; 2025-02-23T11:01:09.235Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/math.js :get
+; 2025-02-23T11:01:09.240Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/math/coordinate.js :get
+; 2025-02-23T11:01:09.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/dom.js :get
+; 2025-02-23T11:01:09.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/browserfeature.js :get
+; 2025-02-23T11:01:09.243Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventtarget.js :get
+; 2025-02-23T11:01:09.246Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/dataset.js :get
+; 2025-02-23T11:01:09.262Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/string.js :get
+; 2025-02-23T11:01:09.267Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/thenable.js :get
+; 2025-02-23T11:01:09.268Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/resolver.js :get
+; 2025-02-23T11:01:09.268Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/freelist.js :get
+; 2025-02-23T11:01:09.267Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/debug/asyncstacktag.js :get
+; 2025-02-23T11:01:09.281Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/useragent/product.js :get
+; 2025-02-23T11:01:09.282Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/run.js :get
+; 2025-02-23T11:01:09.283Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/workqueue.js :get
+; 2025-02-23T11:01:09.282Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/promise/promise.js :get
+; 2025-02-23T11:01:09.283Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/nexttick.js :get
+; 2025-02-23T11:01:09.282Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/async/throwexception.js :get
+; 2025-02-23T11:01:09.291Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/tools/heads_up.js :get
+; 2025-02-23T11:01:09.293Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/string/stringformat.js :get
+; 2025-02-23T11:01:09.293Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/core.js :get
+; 2025-02-23T11:01:09.291Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/set.js :get
+; 2025-02-23T11:01:09.295Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/mochikit/async/deferred.js :get
+; 2025-02-23T11:01:09.368Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main.js :get
+; 2025-02-23T11:01:09.368Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/core.js.map :get
+; 2025-02-23T11:01:09.390Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/timer/timer.js :get
+; 2025-02-23T11:01:09.391Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/json/json.js :get
+; 2025-02-23T11:01:09.397Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/json/hybrid.js :get
+; 2025-02-23T11:01:09.404Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/httpstatus.js :get
+; 2025-02-23T11:01:09.412Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrlike.js :get
+; 2025-02-23T11:01:09.433Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xmlhttp.js :get
+; 2025-02-23T11:01:09.438Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/wrapperxmlhttpfactory.js :get
+; 2025-02-23T11:01:09.443Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xmlhttpfactory.js :get
+; 2025-02-23T11:01:09.448Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/iter/iter.js :get
+; 2025-02-23T11:01:09.434Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrio.js :get
+; 2025-02-23T11:01:09.438Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/eventtype.js :get
+; 2025-02-23T11:01:09.448Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/errorcode.js :get
+; 2025-02-23T11:01:09.448Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/mechanism.js :get
+; 2025-02-23T11:01:09.461Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/iterablemechanism.js :get
+; 2025-02-23T11:01:09.464Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5sessionstorage.js :get
+; 2025-02-23T11:01:09.467Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5webstorage.js :get
+; 2025-02-23T11:01:09.470Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/jsloader.js :get
+; 2025-02-23T11:01:09.478Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/iter/es6.js :get
+; 2025-02-23T11:01:09.486Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/map.js :get
+; 2025-02-23T11:01:09.486Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/html/legacyconversions.js :get
+; 2025-02-23T11:01:09.486Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/collections/iters.js :get
+; 2025-02-23T11:01:09.486Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/errorcode.js :get
+; 2025-02-23T11:01:09.496Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/ieuserdata.js :get
+; 2025-02-23T11:01:09.496Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/websocket.js :get
+; 2025-02-23T11:01:09.500Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/preload.js :get
+; 2025-02-23T11:01:09.497Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/html5localstorage.js :get
+; 2025-02-23T11:01:09.499Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/prefixedmechanism.js :get
+; 2025-02-23T11:01:09.520Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/storage/mechanism/mechanismfactory.js :get
+; 2025-02-23T11:01:09.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl.js :get
+; 2025-02-23T11:01:09.522Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/logging.js :get
+; 2025-02-23T11:01:09.600Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/protocols.js :get
+; 2025-02-23T11:01:09.609Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/context.js :get
+; 2025-02-23T11:01:09.609Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/defaults.js :get
+; 2025-02-23T11:01:09.605Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/format.js :get
+; 2025-02-23T11:01:09.605Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/state.js :get
+; 2025-02-23T11:01:09.622Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/printing.js :get
+; 2025-02-23T11:01:09.625Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/prefs.js :get
+; 2025-02-23T11:01:09.625Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/munging.js :get
+; 2025-02-23T11:01:09.625Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/helpers.js :get
+; 2025-02-23T11:01:09.641Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/toolbox.js :get
+; 2025-02-23T11:01:09.644Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/async.js :get
+; 2025-02-23T11:01:09.642Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/version.js :get
+; 2025-02-23T11:01:09.649Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/data.js :get
+; 2025-02-23T11:01:09.644Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/util.js :get
+; 2025-02-23T11:01:09.656Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/templating.js :get
+; 2025-02-23T11:01:09.656Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/markup.js :get
+; 2025-02-23T11:01:09.659Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/walk.js :get
+; 2025-02-23T11:01:09.659Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/reporter.js :get
+; 2025-02-23T11:01:09.670Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters.js :get
+; 2025-02-23T11:01:09.672Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/hints.js :get
+; 2025-02-23T11:01:09.673Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/stacktrace.js :get
+; 2025-02-23T11:01:09.677Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/preload.js :get
+; 2025-02-23T11:01:09.677Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/core.js :get
+; 2025-02-23T11:01:09.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/budgeting.js :get
+; 2025-02-23T11:01:09.678Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/core.js :get
+; 2025-02-23T11:01:09.697Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/string.js.map :get
+; 2025-02-23T11:01:09.728Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/pprint.js.map :get
+; 2025-02-23T11:01:09.731Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/system_exit.js :get
+; 2025-02-23T11:01:09.764Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/css_reload.js :get
+; 2025-02-23T11:01:09.779Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/set.js.map :get
+; 2025-02-23T11:01:09.776Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/cssom/cssom.js :get
+; 2025-02-23T11:01:09.776Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/tools/heads_up.js.map :get
+; 2025-02-23T11:01:09.811Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/core.js.map :get
+; 2025-02-23T11:01:09.827Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/process/env.js :get
+; 2025-02-23T11:01:09.827Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main.js.map :get
+; 2025-02-23T11:01:09.860Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/protocols.js :get
+; 2025-02-23T11:01:09.860Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/batching.js :get
+; 2025-02-23T11:01:09.852Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/util.js :get
+; 2025-02-23T11:01:09.851Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/debug.js :get
+; 2025-02-23T11:01:09.861Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/ratom.js :get
+; 2025-02-23T11:01:09.865Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/component.js :get
+; 2025-02-23T11:01:09.869Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/input.js :get
+; 2025-02-23T11:01:09.893Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/template.js :get
+; 2025-02-23T11:01:09.894Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/loggers.js :get
+; 2025-02-23T11:01:09.904Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/trace.js :get
+; 2025-02-23T11:01:09.904Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interop.js :get
+; 2025-02-23T11:01:09.904Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/dom.js :get
+; 2025-02-23T11:01:09.893Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/core.js :get
+; 2025-02-23T11:01:09.909Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/utils.js :get
+; 2025-02-23T11:01:09.910Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interceptor.js :get
+; 2025-02-23T11:01:09.910Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/registrar.js :get
+; 2025-02-23T11:01:09.912Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/router.js :get
+; 2025-02-23T11:01:09.917Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/cofx.js :get
+; 2025-02-23T11:01:09.917Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/db.js :get
+; 2025-02-23T11:01:09.917Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/settings.js :get
+; 2025-02-23T11:01:09.919Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/std_interceptors.js :get
+; 2025-02-23T11:01:09.919Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/fx.js :get
+; 2025-02-23T11:01:09.921Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/eventtype.js :get
+; 2025-02-23T11:01:09.921Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/event.js :get
+; 2025-02-23T11:01:09.925Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/html5history.js :get
+; 2025-02-23T11:01:09.925Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/bidi/bidi.js :get
+; 2025-02-23T11:01:09.925Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/subs.js :get
+; 2025-02-23T11:01:09.925Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/events.js :get
+; 2025-02-23T11:01:09.925Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/dom/inputtype.js :get
+; 2025-02-23T11:01:09.926Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/core.js :get
+; 2025-02-23T11:01:09.927Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/events/eventhandler.js :get
+; 2025-02-23T11:01:09.935Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/router.js :get
+; 2025-02-23T11:01:09.935Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/labs/useragent/device.js :get
+; 2025-02-23T11:01:09.935Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/history/history.js :get
+; 2025-02-23T11:01:09.935Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/util.js :get
+; 2025-02-23T11:01:09.936Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/memoize/memoize.js :get
+; 2025-02-23T11:01:09.939Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/url.js :get
+; 2025-02-23T11:01:09.939Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/home.js :get
+; 2025-02-23T11:01:09.942Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/formats.js :get
+; 2025-02-23T11:01:09.942Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/interceptors.js :get
+; 2025-02-23T11:01:09.940Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/protocols.js :get
+; 2025-02-23T11:01:09.942Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/pushy/core.js :get
+; 2025-02-23T11:01:09.944Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/util.js :get
+; 2025-02-23T11:01:09.947Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/delimiters.js :get
+; 2025-02-23T11:01:09.946Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/types.js :get
+; 2025-02-23T11:01:09.947Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xml_http_request.js :get
+; 2025-02-23T11:01:09.947Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/caching.js :get
+; 2025-02-23T11:01:09.947Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/eq.js :get
+; 2025-02-23T11:01:09.950Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/reader.js :get
+; 2025-02-23T11:01:09.951Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/writer.js :get
+; 2025-02-23T11:01:09.950Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/impl/decoder.js :get
+; 2025-02-23T11:01:09.952Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit/handlers.js :get
+; 2025-02-23T11:01:09.952Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/com/cognitect/transit.js :get
+; 2025-02-23T11:01:09.953Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cognitect/transit.js :get
+; 2025-02-23T11:01:09.958Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/transit.js :get
+; 2025-02-23T11:01:09.958Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/json.js :get
+; 2025-02-23T11:01:09.960Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/simple.js :get
+; 2025-02-23T11:01:09.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/set.js :get
+; 2025-02-23T11:01:09.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/collection.js :get
+; 2025-02-23T11:01:09.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/pool.js :get
+; 2025-02-23T11:01:09.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/easy.js :get
+; 2025-02-23T11:01:09.962Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/node.js :get
+; 2025-02-23T11:01:09.979Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/api.js :get
+; 2025-02-23T11:01:09.983Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhrmanager.js :get
+; 2025-02-23T11:01:09.983Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/heap.js :get
+; 2025-02-23T11:01:09.978Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/core.js :get
+; 2025-02-23T11:01:09.990Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/priorityqueue.js :get
+; 2025-02-23T11:01:09.983Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/ring.js :get
+; 2025-02-23T11:01:10.005Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/net/xhriopool.js :get
+; 2025-02-23T11:01:10.005Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/queue.js :get
+; 2025-02-23T11:01:10.005Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/day8/re_frame/http_fx.js :get
+; 2025-02-23T11:01:10.009Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xhrio.js :get
+; 2025-02-23T11:01:10.009Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/goog/structs/prioritypool.js :get
+; 2025-02-23T11:01:10.013Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js :get
+; 2025-02-23T11:01:10.013Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.js :get
+; 2025-02-23T11:01:10.028Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js :get
+; 2025-02-23T11:01:10.028Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/not_found.js :get
+; 2025-02-23T11:01:10.028Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/events.js :get
+; 2025-02-23T11:01:10.029Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/logging.js.map :get
+; 2025-02-23T11:01:10.037Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/protocols.js.map :get
+; 2025-02-23T11:01:10.032Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl.js.map :get
+; 2025-02-23T11:01:10.034Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/repl/preload.js.map :get
+; 2025-02-23T11:01:10.032Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.js :get
+; 2025-02-23T11:01:10.037Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/context.js.map :get
+; 2025-02-23T11:01:10.042Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/helpers.js.map :get
+; 2025-02-23T11:01:10.041Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/format.js.map :get
+; 2025-02-23T11:01:10.041Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/prefs.js.map :get
+; 2025-02-23T11:01:10.042Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/state.js.map :get
+; 2025-02-23T11:01:10.041Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/defaults.js.map :get
+; 2025-02-23T11:01:10.042Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/munging.js.map :get
+; 2025-02-23T11:01:10.055Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/version.js.map :get
+; 2025-02-23T11:01:10.056Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/printing.js.map :get
+; 2025-02-23T11:01:10.056Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/walk.js.map :get
+; 2025-02-23T11:01:10.055Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/clojure/data.js.map :get
+; 2025-02-23T11:01:10.056Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/util.js.map :get
+; 2025-02-23T11:01:10.062Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/templating.js.map :get
+; 2025-02-23T11:01:10.087Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/reporter.js.map :get
+; 2025-02-23T11:01:10.087Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/markup.js.map :get
+; 2025-02-23T11:01:10.087Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/toolbox.js.map :get
+; 2025-02-23T11:01:10.093Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /api/fhir/filters :get
+; 2025-02-23T11:01:10.093Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/budgeting.js.map :get
+; 2025-02-23T11:01:10.087Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/async.js.map :get
+; 2025-02-23T11:01:10.097Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters/core.js.map :get
+; 2025-02-23T11:01:10.098Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/hints.js.map :get
+; 2025-02-23T11:01:10.099Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/formatters.js.map :get
+; 2025-02-23T11:01:10.101Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/core.js.map :get
+; 2025-02-23T11:01:10.102Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/devtools/preload.js.map :get
+; 2025-02-23T11:01:10.101Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cljs/stacktrace.js.map :get
+; 2025-02-23T11:01:10.104Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/css_reload.js.map :get
+; 2025-02-23T11:01:10.104Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/figwheel/main/system_exit.js.map :get
+; 2025-02-23T11:01:10.105Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/process/env.js.map :get
+; 2025-02-23T11:01:10.106Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/debug.js.map :get
+; 2025-02-23T11:01:10.106Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/protocols.js.map :get
+; 2025-02-23T11:01:10.108Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/ratom.js.map :get
+; 2025-02-23T11:01:10.109Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/component.js.map :get
+; 2025-02-23T11:01:10.110Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/batching.js.map :get
+; 2025-02-23T11:01:10.111Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/util.js.map :get
+; 2025-02-23T11:01:10.112Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/input.js.map :get
+; 2025-02-23T11:01:10.116Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/impl/template.js.map :get
+; 2025-02-23T11:01:10.117Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/dom.js.map :get
+; 2025-02-23T11:01:10.122Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/reagent/core.js.map :get
+; 2025-02-23T11:01:10.127Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/trace.js.map :get
+; 2025-02-23T11:01:10.128Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interop.js.map :get
+; 2025-02-23T11:01:10.128Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/settings.js.map :get
+; 2025-02-23T11:01:10.129Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/loggers.js.map :get
+; 2025-02-23T11:01:10.128Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/registrar.js.map :get
+; 2025-02-23T11:01:10.133Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/interceptor.js.map :get
+; 2025-02-23T11:01:10.136Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/router.js.map :get
+; 2025-02-23T11:01:10.136Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/utils.js.map :get
+; 2025-02-23T11:01:10.136Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/events.js.map :get
+; 2025-02-23T11:01:10.136Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/db.js.map :get
+; 2025-02-23T11:01:10.137Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/fx.js.map :get
+; 2025-02-23T11:01:10.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/std_interceptors.js.map :get
+; 2025-02-23T11:01:10.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/cofx.js.map :get
+; 2025-02-23T11:01:10.141Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/subs.js.map :get
+; 2025-02-23T11:01:10.148Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/protocols.js.map :get
+; 2025-02-23T11:01:10.148Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/re_frame/core.js.map :get
+; 2025-02-23T11:01:10.149Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/pushy/core.js.map :get
+; 2025-02-23T11:01:10.149Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/router.js.map :get
+; 2025-02-23T11:01:10.149Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/bidi/bidi.js.map :get
+; 2025-02-23T11:01:10.151Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/util.js.map :get
+; 2025-02-23T11:01:10.152Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/url.js.map :get
+; 2025-02-23T11:01:10.148Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/home.js.map :get
+; 2025-02-23T11:01:10.152Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/formats.js.map :get
+; 2025-02-23T11:01:10.151Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/interceptors.js.map :get
+; 2025-02-23T11:01:10.155Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/json.js.map :get
+; 2025-02-23T11:01:10.155Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cognitect/transit.js.map :get
+; 2025-02-23T11:01:10.155Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/transit.js.map :get
+; 2025-02-23T11:01:10.156Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/ring.js.map :get
+; 2025-02-23T11:01:10.156Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xml_http_request.js.map :get
+; 2025-02-23T11:01:10.156Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/simple.js.map :get
+; 2025-02-23T11:01:10.159Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/easy.js.map :get
+; 2025-02-23T11:01:10.159Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/xhrio.js.map :get
+; 2025-02-23T11:01:10.160Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.js.map :get
+; 2025-02-23T11:01:10.160Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/api.js.map :get
+; 2025-02-23T11:01:10.160Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/ajax/core.js.map :get
+; 2025-02-23T11:01:10.161Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/patients.js.map :get
+; 2025-02-23T11:01:10.163Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/pages/not_found.js.map :get
+; 2025-02-23T11:01:10.164Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/core.js.map :get
+; 2025-02-23T11:01:10.165Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/day8/re_frame/http_fx.js.map :get
+; 2025-02-23T11:01:10.164Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.js.map :get
+; 2025-02-23T11:01:10.164Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/events.js.map :get
+; 2025-02-23T11:01:10.255Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/ui.cljs :get
+; 2025-02-23T11:01:10.260Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/dev/curiousprogrammer/app/subs.cljs :get
+; 2025-02-23T11:02:01.333Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cider/nrepl/inlined/deps/suitable/v0v6v2/suitable/js_introspection.js :get
+; 2025-02-23T11:02:01.351Z Titanium.local INFO [dev.curiousprogrammer.server.core:17] - Request: /js/cider/nrepl/inlined/deps/suitable/v0v6v2/suitable/js_introspection.js.map :get
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Failed to compile build dev in 0.265 seconds.
+; [Figwheel:WARNING] Could not Read   src/dev/curiousprogrammer/app/pages/patients.cljs   line:115  column:63
+;
+;   The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+;
+;   110     {:db (assoc db :fhir/loading? true :fhir/error nil)
+;   111      :http-xhrio {:method          :post
+;   112                   :uri             api/route-fhir-patient-search
+;   113                   :response-format (ajax/json-response-format {:keywords? true})
+;   114                   #_#_#_:on-success      [:fhir/fetch-filter-success]
+;   115                   :on-failure      [:fhir/fetch-filter-failed]}}))
+;                                                                      ^---
+;   116
+;   117
+;   118
+;   119  (defn page
+;   120    []
+;
+; [Figwheel:SEVERE] clojure.lang.ExceptionInfo: /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Failed to compile build dev in 0.275 seconds.
+; [Figwheel:WARNING] Could not Read   src/dev/curiousprogrammer/app/pages/patients.cljs   line:115  column:63
+;
+;   The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+;
+;   110     {:db (assoc db :fhir/loading? true :fhir/error nil)
+;   111      :http-xhrio {:method          :post
+;   112                   :uri             api/route-fhir-patient-search
+;   113                   :response-format (ajax/json-response-format {:keywords? true})
+;   114                   #_#_#_:on-success      [:fhir/fetch-filter-success]
+;   115                   :on-failure      [:fhir/fetch-filter-failed]}}))
+;                                                                      ^---
+;   116
+;   117
+;   118
+;   119  (defn page
+;   120    []
+;
+; [Figwheel:SEVERE] clojure.lang.ExceptionInfo: /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; [Figwheel] Compiling build dev to "resources/public/js/main.js"
+; [Figwheel] Failed to compile build dev in 0.208 seconds.
+; [Figwheel:WARNING] Could not Read   src/dev/curiousprogrammer/app/pages/patients.cljs   line:115  column:63
+;
+;   The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+;
+;   110     {:db (assoc db :fhir/loading? true :fhir/error nil)
+;   111      :http-xhrio {:method          :post
+;   112                   :uri             api/route-fhir-patient-search
+;   113                   :response-format (ajax/json-response-format {:keywords? true})
+;   114                   #_#_#_:on-success      [:fhir/fetch-filter-success]
+;   115                   :on-failure      [:fhir/fetch-filter-failed]}}))
+;                                                                      ^---
+;   116
+;   117
+;   118
+;   119  (defn page
+;   120    []
+;
+; [Figwheel:SEVERE] clojure.lang.ExceptionInfo: /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; Syntax error macroexpanding clojure.core/ns at (src/dev/curiousprogrammer/server/routes.clj:1:1).
+; ((:require [compojure.core :refer [defroutes GET POST context]] [compojure.route :as route] [ring.util.response :as response :refer [resource-response]] [dev.curiousprogrammer.fhir.interface :fhir])) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; [Figwheel:WARNING] Compile Exception   src/dev/curiousprogrammer/server/routes.clj   line:1  column:1
+;
+;   Call to clojure.core/ns did not conform to spec.
+;
+;   1  (ns dev.curiousprogrammer.server.routes
+;      ^---
+;   2    (:require [compojure.core :refer [defroutes GET POST context]]
+;   3              [compojure.route :as route]
+;   4              [ring.util.response :as response :refer [resource-response]]
+;   5              [dev.curiousprogrammer.fhir.interface :fhir]))
+;   6
+;
+; [Figwheel:SEVERE] clojure.lang.ExceptionInfo: Call to clojure.core/ns did not conform to spec.
+; Execution error (FileNotFoundException) at dev.curiousprogrammer.server.routes/eval40968$loading (REPL:1).
+; Could not locate dev/curiousprogrammer/fhir/interface__init.class, dev/curiousprogrammer/fhir/interface.clj or dev/curiousprogrammer/fhir/interface.cljc on classpath.
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; [Figwheel:WARNING] Couldn't load Clojure file   src/dev/curiousprogrammer/server/routes.clj   line:1  column:1
+;
+;   Could not locate dev/curiousprogrammer/fhir/interface__init.class, dev/curiousprogrammer/fhir/interface.clj or dev/curiousprogrammer/fhir/interface.cljc on classpath.
+;
+;   1  (ns dev.curiousprogrammer.server.routes
+;      ^---
+;   2    (:require [compojure.core :refer [defroutes GET POST context]]
+;   3              [compojure.route :as route]
+;   4              [ring.util.response :as response :refer [resource-response]]
+;   5              [dev.curiousprogrammer.fhir.interface :as fhir]))
+;   6
+;
+; [Figwheel:SEVERE] java.io.FileNotFoundException: Could not locate dev/curiousprogrammer/fhir/interface__init.class, dev/curiousprogrammer/fhir/interface.clj or dev/curiousprogrammer/fhir/interface.cljc on classpath.
+; Execution error (FileNotFoundException) at dev.curiousprogrammer.server.routes/eval43677$loading (REPL:1).
+; Could not locate dev/curiousprogrammer/fhir/interface__init.class, dev/curiousprogrammer/fhir/interface.clj or dev/curiousprogrammer/fhir/interface.cljc on classpath.
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Using host:port localhost:57974 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: deps.edn + Figwheel Main...
+; Starting cljs repl for: deps.edn + Figwheel Main...
+; Unexpected error (ExceptionInfo) compiling at (REPL:1).
+; /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; Failed starting cljs repl
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/core.clj:55:4).
+; Unable to resolve symbol: stop-server in this context
+clj꞉dev.curiousprogrammer.server.core꞉> 
+; Evaluating file: core.clj
+;
+; ; clj  dev.curiousprogrammer.server.core
+; Syntax error compiling at (src/dev/curiousprogrammer/server/core.clj:1:1).
+; namespace 'dev.curiousprogrammer.server.routes' not found
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉dev.curiousprogrammer.server.core꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/core.clj:55:4).
+; Unable to resolve symbol: stop-server in this context
+clj꞉dev.curiousprogrammer.server.core꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/core.clj:46:3).
+; Unable to resolve symbol: start-server in this context
+clj꞉dev.curiousprogrammer.server.core꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/core.clj:1:1).
+; namespace 'dev.curiousprogrammer.server.routes' not found
+clj꞉dev.curiousprogrammer.server.core꞉> 
+nil
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; Syntax error macroexpanding compojure.core/let-request at (src/dev/curiousprogrammer/server/routes.clj:44:5).
+; Unexpected binding: {:keys [params]}
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+#'dev.curiousprogrammer.server.routes/api-routes
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; Syntax error macroexpanding compojure.core/let-request at (src/dev/curiousprogrammer/server/routes.clj:44:5).
+; Unexpected binding: {:keys [params]}
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; Syntax error macroexpanding compojure.core/let-request at (src/dev/curiousprogrammer/server/routes.clj:44:5).
+; Unexpected binding: {:keys [params]}
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+#'dev.curiousprogrammer.server.routes/api-routes
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Using host:port localhost:59479 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: deps.edn + Figwheel Main...
+; Starting cljs repl for: deps.edn + Figwheel Main...
+; Unexpected error (ExceptionInfo) compiling at (REPL:1).
+; /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; Failed starting cljs repl
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (dev/curiousprogrammer/fhir/interface.clj:1:1).
+; namespace 'dev.curiousprogrammer.fhir.api' not found
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+nil
+clj꞉dev.curiousprogrammer.fhir.interface꞉> 
+nil
+clj꞉dev.curiousprogrammer.server.core꞉> 
+nil
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/routes.clj:46:17).
+; No such var: fhir/fetch-patients
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+nil
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; Syntax error compiling at (src/dev/curiousprogrammer/server/routes.clj:46:17).
+; No such var: fhir/fetch-patients
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+2
+clj꞉dev.curiousprogrammer.server.routes꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "deps.edn + Figwheel Main" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+;
+
+; Starting Jack-in: (cd /Users/clarice/Workspace/projects/poly/bases/webapp; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.1.1"},cider/cider-nrepl {:mvn/version,"0.47.1"},cider/piggieback {:mvn/version,"0.5.3"}}}' -M:dev:figwheel -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]")
+; Using host:port localhost:63052 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: deps.edn + Figwheel Main...
+; Starting cljs repl for: deps.edn + Figwheel Main...
+; Unexpected error (ExceptionInfo) compiling at (REPL:1).
+; /Users/clarice/Workspace/projects/poly/bases/webapp/src/dev/curiousprogrammer/app/pages/patients.cljs [line 115, col 63] The map literal starting with :method on line 111 column 17 contains 7 form(s). Map literals must contain an even number of forms.
+; Failed starting cljs repl
+; Jack-in done.
+clj꞉user꞉> 
+; Evaluating file: interface.clj
+;
+; ; clj  dev.curiousprogrammer.fhir.interface
+; Syntax error compiling at (/Users/clarice/Workspace/projects/poly/components/fhir/src/dev/curiousprogrammer/fhir/interface.clj:1:1).
+; namespace 'dev.curiousprogrammer.fhir.api' not found
+; Evaluation of file interface.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉dev.curiousprogrammer.fhir.interface꞉> 
+; nREPL Connection was closed

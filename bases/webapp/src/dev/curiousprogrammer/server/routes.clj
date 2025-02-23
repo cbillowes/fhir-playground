@@ -1,7 +1,8 @@
 (ns dev.curiousprogrammer.server.routes
-  (:require [compojure.core :refer [defroutes GET context]]
+  (:require [compojure.core :refer [defroutes GET POST context]]
             [compojure.route :as route]
-            [ring.util.response :as response :refer [resource-response]]))
+            [ring.util.response :as response :refer [resource-response]]
+            [dev.curiousprogrammer.fhir.interface :as fhir]))
 
 
 (defroutes web-routes
@@ -39,4 +40,10 @@
                           {:key "organization" :value "Organization"}
                           {:key "general-practitioner" :value "General Practitioner"}
                           {:key "identifier" :value "Identifier"}
-                          {:key "link" :value "Link"}]))))
+                          {:key "link" :value "Link"}]))
+
+    (POST "/fhir/patients/search" []
+      (let [res (fhir/fetch-patients 1 10)]
+        (if (empty? res)
+          (response/response {:status "error" :params "No patients found."})
+          (response/response {:status "ok" :params res}))))))

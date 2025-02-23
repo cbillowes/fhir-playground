@@ -11,3 +11,4 @@
 
 
 (def route-fhir-filters (endpoint "fhir/filters"))
+(def route-fhir-patient-search (endpoint "fhir/patients/search"))

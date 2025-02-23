@@ -24,3 +24,10 @@ Docs: https://hapi.fhir.org/baseR4/swagger-ui/?page=Patient#/Patient/get_Patient
   (->> (query/build-patient-query-for-search query)
        (api/fetch-patients page page-size)
        (transform/transform-patients)))
+
+
+(comment
+
+  (fetch-patients 1 10)
+
+  :rcf)
