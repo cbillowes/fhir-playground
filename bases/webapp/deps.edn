@@ -34,7 +34,7 @@
         ;; A ClojureScript MVC-like Framework For Writing SPAs Using Reagent.
         re-frame/re-frame {:mvn/version "1.4.3"}
         ;; HTTP Effect Handler for re-frame
-        day8.re-frame/http-fx {:mvn/version "v0.2.0"}
+        day8.re-frame/http-fx {:mvn/version "0.2.4"}
         ;; AJAX library for ClojureScript
         cljs-ajax/cljs-ajax {:mvn/version "0.8.4"}
         ;; Bidirectional URI routing
