@@ -13,3 +13,8 @@
                        (keyword))]
      (or (:active-page db) page-name router/default-route))))
 
+
+(rf/reg-sub
+ :initialized?
+ (fn [db _]
+   (:initialized? db)))

@@ -10,6 +10,7 @@
             [dev.curiousprogrammer.app.events]
             [dev.curiousprogrammer.app.subs]))
 
+
 (defn- get-app-element []
   (gdom/getElement "app"))
 
@@ -60,8 +61,10 @@
 
 (defn init []
   (router/start!)
-  (rf/dispatch-sync [:initialize-db])
-  (rf/dispatch-sync [:set-active-page {:page router/default-route}])
+  (let [initialized? @(rf/subscribe [:initialized?])]
+    (when (false? initialized?)
+      (rf/dispatch-sync [:initialize-db])
+      (rf/dispatch-sync [:set-active-page {:page router/default-route}])))
   (when-let [el (get-app-element)]
     (mount el)))
 
