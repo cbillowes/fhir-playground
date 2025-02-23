@@ -1,10 +1,8 @@
 (ns dev.curiousprogrammer.server.core
-  (:require [compojure.core :refer [routes defroutes GET]]
-            [compojure.route :as route]
+  (:require [compojure.core :refer [routes]]
             [ring.middleware.file :refer [wrap-file]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
-            [ring.util.response :refer [resource-response]]
             [ring.adapter.jetty :refer [run-jetty]]
             [taoensso.timbre :as logger]
             [dev.curiousprogrammer.server.routes :as r]))

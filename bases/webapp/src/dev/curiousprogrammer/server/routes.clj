@@ -15,27 +15,28 @@
       (response/response {:status "ok"}))
 
     (GET "/fhir/filters" []
-      (response/response [{:key "language" :value "Language"}
-                          {:key "last-updated" :value "Last Updated"}
-                          {:key "language-code" :value "Language Code"}
-                          {:key "link" :value "Link"}
-                          {:key "identifier" :value "Identifier"}
-                          {:key "active?" :value "Active?"}
+      (response/response [{:key "*" :value "Any"}
                           {:key "partial-name" :value "Partial Name"}
                           {:key "given-name" :value "Given Name"}
                           {:key "family-name" :value "Family Name"}
                           {:key "phonetic-name" :value "Phonetic Name"}
-                          {:key "date-of-birth" :value "Date of Birth"}
-                          {:key "deceased?" :value "Deceased?"}
                           {:key "partial-address" :value "Partial Address"}
+                          {:key "date-of-birth" :value "Date of Birth"}
+                          {:key "gender" :value "Gender"}
                           {:key "city" :value "City"}
                           {:key "state" :value "State"}
                           {:key "country" :value "Country"}
                           {:key "postal-code" :value "Postal Code"}
-                          {:key "gender" :value "Gender"}
-                          {:key "death-date" :value "Death Date"}
-                          {:key "telecom" :value "Telecom"}
                           {:key "email" :value "Email"}
                           {:key "phone" :value "Phone"}
+                          {:key "last-updated" :value "Last Updated"}
+                          {:key "language" :value "Language"}
+                          {:key "language-code" :value "Language Code"}
+                          {:key "active?" :value "Active?"}
+                          {:key "deceased?" :value "Deceased?"}
+                          {:key "telecom" :value "Telecom"}
+                          {:key "death-date" :value "Death Date"}
                           {:key "organization" :value "Organization"}
-                          {:key "general-practitioner" :value "General Practitioner"}]))))
+                          {:key "general-practitioner" :value "General Practitioner"}
+                          {:key "identifier" :value "Identifier"}
+                          {:key "link" :value "Link"}]))))
