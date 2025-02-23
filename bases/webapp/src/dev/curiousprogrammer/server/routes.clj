@@ -1,12 +1,27 @@
 (ns dev.curiousprogrammer.server.routes
   (:require [compojure.core :refer [defroutes GET POST context]]
             [compojure.route :as route]
-            [ring.util.response :as response :refer [resource-response]]
+            [ring.util.response :as response]
+            [ring.util.anti-forgery :refer [anti-forgery-field]]
+            [hiccup.core :refer [html]]
             [dev.curiousprogrammer.fhir.interface :as fhir]))
 
 
+(defn base-template []
+  [:html
+   [:head
+    [:title "FHIR Database"]
+    [:meta {:charset "utf-8"}]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
+    [:link {:rel "stylesheet" :href "/css/style.min.css" :type "text/css"}]]
+   [:body.bg-gray-800
+    (anti-forgery-field)
+    [:div#app]
+    [:script {:src "/js/main_bundle.js" :type "text/javascript"}]]])
+
+
 (defroutes web-routes
-  (GET "/*" [] (resource-response "index.html" {:root "public"}))
+  (GET "/*" [] (html (base-template)))
   (route/not-found "Not Found"))
 
 
@@ -42,7 +57,7 @@
                           {:key "identifier" :value "Identifier"}
                           {:key "link" :value "Link"}]))
 
-    (POST "/fhir/patients/search" []
+    (POST "/fhir/patient-search" []
       (let [res (fhir/fetch-patients 1 10)]
         (if (empty? res)
           (response/response {:status "error" :params "No patients found."})

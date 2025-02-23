@@ -3,6 +3,8 @@
             [ring.middleware.file :refer [wrap-file]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
+            [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
+            [ring.middleware.session :refer [wrap-session]]
             [ring.adapter.jetty :refer [run-jetty]]
             [taoensso.timbre :as logger]
             [dev.curiousprogrammer.server.routes :as r]))
@@ -26,6 +28,8 @@
       (-> (routes r/web-routes)
           (wrap-defaults site-defaults)
           (wrap-file "resources/public"))
+      (wrap-anti-forgery)
+      (wrap-session)
       (wrap-logging)))
 
 
