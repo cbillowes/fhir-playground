@@ -33,8 +33,8 @@
 (defn- footer
   []
   [:footer
-   [:p.text-center.text-gray-400.p-4
-    (str "© " (-> (js/Date.) .getFullYear) " Curious Programmer")]])
+   [:p.text-center.text-gray-400.p-4.mt-4.text-sm
+    (str "Copyright © " (-> (js/Date.) .getFullYear) " Curious Programmer")]])
 
 
 (defn- pages

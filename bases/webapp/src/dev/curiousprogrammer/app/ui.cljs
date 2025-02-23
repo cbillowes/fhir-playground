@@ -5,9 +5,7 @@
   [:div {:class "my-8 w-2/3 mx-auto text-center"}
    [:div {:class "bg-red-400 p-8 rounded-lg shadow-lg"}
     [:h1 {:class "text-5xl font-bold text-red-900"} heading]
-    component
-    [:p {:class "mt-4 text-sm text-red-900"} "Powered by ClojureScript"]]
-   [:p {:class "mt-4 text-sm text-gray-400"} "Copyright © 2025 Curious Programmer"]])
+    component]])
 
 
 (defn textbox [title & {:keys [title-class]
