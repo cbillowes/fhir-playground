@@ -1,9 +1,15 @@
 (ns dev.curiousprogrammer.app.subs
-  (:require [re-frame.core :as rf]))
+  (:require [clojure.string :as str]
+            [re-frame.core :as rf]))
 
 
 (rf/reg-sub
  :active-page
  (fn [db _]
-   (or (:active-page db) :home)))
+   (let [pathname (.-pathname js/window.location)
+         page-name (-> (str/split pathname #"/")
+                       (second)
+                       (keyword)
+                       (or :home))]
+     (or (:active-page db) page-name))))
 
