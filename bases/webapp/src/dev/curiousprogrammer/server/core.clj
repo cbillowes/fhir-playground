@@ -10,12 +10,20 @@
 (defonce server (atom nil))
 (def ^:private port 3000)
 
+
+(defn wrap-logging [handler]
+  (fn [request]
+    (logger/info "Request:" (:uri request) (:request-method request))
+    (handler request)))
+
+
 (def app
   (-> (routes
        api/api-routes
        (route/not-found {:error "Not Found"}))
       wrap-json-body
-      wrap-json-response))
+      wrap-json-response
+      wrap-logging))
 
 
 (defn start-server []
