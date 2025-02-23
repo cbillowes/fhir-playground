@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd bases/webapp
+clj -X:dev
