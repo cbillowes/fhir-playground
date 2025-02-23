@@ -1,10 +1,9 @@
 (ns dev.curiousprogrammer.app.ui)
 
 
-(defn layout [heading component]
-  [:div {:class "my-8 w-2/3 mx-auto text-center"}
+(defn layout [component]
+  [:div {:class "my-8 w-full mx-auto text-center"}
    [:div {:class "bg-red-400 p-8 rounded-lg shadow-lg"}
-    [:h1 {:class "text-5xl font-bold text-red-900"} heading]
     component]])
 
 

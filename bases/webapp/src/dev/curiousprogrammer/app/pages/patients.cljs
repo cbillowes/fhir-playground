@@ -72,10 +72,11 @@
 
 (defn page
   []
-  [ui/layout
-   "🧑‍😷 Search FHIR Patients"
-   [:<>
-    [:p "Fast Healthcare Interoperability Resources"]
-    [:div {:class "bg-gray-50 p-8 rounded-lg mt-8"}
-     [:div {:class "flex gap-4 mb-4"} [ui/textbox "Filter value:" :title-class "text-red-900"] [filter-selectbox]]
-     [ui/button "Search" :class "bg-yellow-400 text-yellow-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer"]]]])
+  [:div {:class "my-8 max-w-4xl w-2/3 mx-auto text-center text-white leading-relaxed"}
+   [:h1.font-bold.my-2.text-4xl "🤒 Search for Patients"]
+   [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
+   [ui/layout
+    [:<>
+     [:div {:class "bg-gray-50 p-8 rounded-lg mt-8"}
+      [:div {:class "flex gap-4 mb-4"} [ui/textbox "Filter value:" :title-class "text-red-900"] [filter-selectbox]]
+      [ui/button "Search" :class "bg-yellow-400 text-yellow-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer"]]]]])
