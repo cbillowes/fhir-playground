@@ -1,4 +1,4 @@
-(ns dev.curiousprogrammer.webapp.web.ui)
+(ns dev.curiousprogrammer.app.ui)
 
 
 (defn layout [heading component]

@@ -1,8 +1,8 @@
-(ns ^:figwheel-hooks dev.curiousprogrammer.webapp.web.core
+(ns ^:figwheel-hooks dev.curiousprogrammer.app.core
   (:require [goog.dom :as gdom]
             [reagent.core :as reagent :refer [atom]]
             [reagent.dom :as rdom]
-            [dev.curiousprogrammer.webapp.web.page-patients :as patients]))
+            [dev.curiousprogrammer.app.page-patients :as patients]))
 
 
 ;; define your app data so that it doesn't get over-written on reload

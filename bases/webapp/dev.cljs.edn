@@ -3,9 +3,11 @@
   :auto-testing true
   :auto-bundle :webpack
   :open-url false
-  :ring-handler dev.curiousprogrammer.webapp.server/ring-handler}
-{:main dev.curiousprogrammer.webapp.web.core
+  #_#_:ring-handler dev.curiousprogrammer.webapp.server/ring-handler}
+{:main dev.curiousprogrammer.app.core
  :output-dir "resources/public/js"
  :asset-path "/js"
  :figwheel {:server-port 9500}
- :nrepl {:port 7000}}
+ :devtools {:http-server-root "public"
+            :server-port 8080
+            :server-proxy "http://localhost:3000"}}

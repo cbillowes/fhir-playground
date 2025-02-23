@@ -1,5 +1,5 @@
-(ns dev.curiousprogrammer.webapp.web.page-patients
-  (:require [dev.curiousprogrammer.webapp.web.ui :as ui]))
+(ns dev.curiousprogrammer.app.page-patients
+  (:require [dev.curiousprogrammer.app.ui :as ui]))
 
 
 (defn- filter-selectbox

@@ -1,49 +1,55 @@
-{:paths ["src" "app" "resources"]
+{:paths ["src" "resources" "target"]
+
  :deps {org.clojure/clojure {:mvn/version "1.12.0"}
         org.clojure/data.json {:mvn/version "2.5.1"}
 
-        ;; nREPL for interactive development
-        nrepl/nrepl {:mvn/version "1.1.1"}
-
-        ;; Client-side
-        org.clojure/clojurescript {:mvn/version "1.11.132"}
-        reagent/reagent {:mvn/version "1.2.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]}
-       ;; Figwheel for hot-reloading
-        com.bhauman/figwheel-main {:mvn/version "0.2.18"}
-
-        ;; Pedestal (core HTTP handling)
-        ;; http://pedestal.io/pedestal/0.7/guides/pedestal-with-component.html
-        io.pedestal/pedestal.service {:mvn/version "0.7.2"}
-        io.pedestal/pedestal.jetty {:mvn/version "0.7.2"}
-        io.pedestal/pedestal.route {:mvn/version "0.7.2"}
-        com.stuartsierra/component {:mvn/version "1.1.0"}
-        com.stuartsierra/component.repl {:mvn/version "1.0.0"}
+        ;; Backend dependencies
 
         ;; Ring Core - Required for middleware & handlers
-        ring/ring-core {:mvn/version "1.11.0"}
+        ring/ring-core {:mvn/version "1.13.0"}
         ;; Jetty Adapter - Needed to run Pedestal with Jetty
-        ring/ring-jetty-adapter {:mvn/version "1.11.0"}
+        ring/ring-jetty-adapter {:mvn/version "1.13.0"}
         ;; Middleware Defaults (helps with static files & CORS)
-        ring/ring-defaults {:mvn/version "0.3.4"}
+        ring/ring-defaults {:mvn/version "0.6.0"}
         ;; Middleware for serving static files
-        ring/ring-servlet {:mvn/version "1.11.0"}
+        ring/ring-servlet {:mvn/version "1.13.0"}
         ;; Enables CORS (for API requests from browsers)
         ring-cors/ring-cors {:mvn/version "0.1.13"}
         ;; Logging middleware
         ring-logger/ring-logger {:mvn/version "1.1.1"}
+        compojure/compojure {:mvn/version "1.7.1"}
+        clj-http/clj-http {:mvn/version "3.13.0"}
+        ;; Add any other backend deps you need
+        ;; nREPL for interactive development
+        nrepl/nrepl {:mvn/version "1.3.1"}
+
+        ;; Client-side
+        org.clojure/clojurescript {:mvn/version "1.11.132"}
+        reagent/reagent {:mvn/version "1.3.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]}
+       ;; Figwheel for hot-reloading
+        com.bhauman/figwheel-main {:mvn/version "0.2.20"}
 
         ;; Logging
         com.taoensso/timbre {:mvn/version "6.6.1"}
         org.slf4j/slf4j-simple {:mvn/version "2.0.16"}}
- :aliases {:test {:extra-paths ["test"]
+
+ :aliases {;; Figwheel alias for running ClojureScript development server
+           :figwheel {:extra-deps {cider/cider-nrepl {:mvn/version "0.52.0"}
+                                   nrepl/nrepl {:mvn/version "1.3.1"}
+                                   com.bhauman/figwheel-main {:mvn/version "0.2.20"}
+                                   com.bhauman/rebel-readline-cljs {:mvn/version "0.1.5"}}
+                      :extra-paths ["src" "resources" "test"]
+                      :exec-fn figwheel.main/start
+                      :exec-args {:build "dev"}}
+
+           ;; Server alias for running the server
+           :dev {:extra-deps {cider/cider-nrepl {:mvn/version "0.52.0"}}
+                 :extra-paths ["src" "resources" "test"]
+                 :exec-fn dev.curiousprogrammer.server.core/-main}
+
+           :test {:extra-paths ["test"]
                   :extra-deps {}
                   :main-opts ["-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "dev.test-runner"]}
-           :fig {:extra-deps
-                 {com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
-                  com.bhauman/figwheel-main {:mvn/version "0.2.20"}
-                  org.slf4j/slf4j-nop {:mvn/version "2.0.16"}}
-                 :extra-paths ["target" "test"]}
-           :serve {:main-opts ["-m" "dev.curiousprogrammer.webapp.server"]}
            ;; -b dev	Specifies the build name as dev (corresponding to dev.cljs.edn)
            ;; -r	Starts a REPL after launching Figwheel
            :build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}

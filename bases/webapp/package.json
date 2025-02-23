@@ -12,7 +12,7 @@
   },
   "scripts": {
     "tailwind:watch": "npx @tailwindcss/cli -i resources/public/css/style.css -o resources/public/css/style.min.css --watch",
-    "figwheel:watch": "clj -M:clean:fig",
+    "figwheel:watch": "clj -M:clean:build:figwheel",
     "dev": "concurrently --kill-others \"npm run tailwind:watch\" \"npm run figwheel:watch\""
   }
 }
