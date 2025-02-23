@@ -84,18 +84,26 @@
 
 
 (rf/reg-event-db
- :fhir/clear-filter-fields
+ :fhir/clear-filter-by
  (fn [db _]
-   (dissoc db :fhir/filter-by :fhir/filter-value)))
+   (dissoc db :fhir/filter-by)))
+
+
+(rf/reg-event-db
+ :fhir/clear-filter-value
+ (fn [db _]
+   (dissoc db :fhir/filter-value)))
 
 
 (rf/reg-event-db
  :fhir/store-filter
- (fn [db [_ key value]]
-   (let [filters (->> (:fhir/custom-filters db)
-                      (filter #(= value (get % key)))
-                      (distinct))]
-     (assoc db :fhir/custom-filters (conj filters {:by (:fhir/filter-by db) :value (:fhir/filter-value db)})))))
+ (fn [db [_ type value]]
+   (when (and (= type :by)
+              (not (nil? value)))
+     (let [filters (->> (:fhir/custom-filters db)
+                        (filter #(= value (get % type)))
+                        (distinct))]
+       (assoc db :fhir/custom-filters (conj filters {:by (:fhir/filter-by db) :value (:fhir/filter-value db)}))))))
 
 
 (rf/reg-event-db
@@ -111,7 +119,7 @@
     :http-xhrio {:method          :post
                  :uri             api/route-fhir-patient-search
                  :response-format (ajax/json-response-format {:keywords? true})
-                 #_#_#_:on-success      [:fhir/fetch-filter-success]
+                 #_#_#_#_:on-success      [:fhir/fetch-filter-success]
                  :on-failure      [:fhir/fetch-filter-failed]}}))
 
 
@@ -135,6 +143,7 @@
              :title-class "text-red-900"
              :class "w-1/2"
              :selected-value filter-by
+             :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
              :on-change (fn [value]
                           (rf/dispatch [:fhir/filter-by value])
                           (rf/dispatch [:fhir/store-filter :by value]))])
@@ -142,19 +151,15 @@
            :class "w-1/2"
            :title-class "text-red-900"
            :default-value filter-value
+           :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
            :on-change (fn [value]
                         (rf/dispatch [:fhir/filter-value value])
                         (rf/dispatch [:fhir/store-filter :value value]))]]]
         (when (seq available-filters)
-          [:div.flex
-           [ui/button "➕"
-            :class "ml-4 w-16 bg-green-400 text-green-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer flex-none block"
-            :title "Add filter to search criteria"
-            :on-click #(rf/dispatch [:fhir/store-filter])]
-           [ui/button "✖️"
-            :class "ml-4 w-16 bg-slate-400 text-slate-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer flex-none block"
-            :title "Clear filters"
-            :on-click #(rf/dispatch [:fhir/clear-filter-fields])]])]
+          [ui/button "➕"
+           :class "ml-4 w-8 bg-green-400 text-green-900 hover:bg-blue-400 hover:text-blue-900 cursor-pointer flex-none block"
+           :title "Add filter to search criteria"
+           :on-click #(rf/dispatch [:fhir/store-filter])])]
        [ui/button "Search" :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer"]
        (when (seq custom-filters)
          [:div.mt-2.flex.flex-wrap

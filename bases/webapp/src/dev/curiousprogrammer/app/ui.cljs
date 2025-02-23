@@ -7,25 +7,32 @@
     component]])
 
 
-(defn textbox [text & {:keys [title title-class class on-change default-value]
-                        :or {title-class ""
-                             class ""
-                             on-change (fn [_])}}]
+
+(defn label
+  [text & {:keys [title-class value on-clear-value]}]
+  [:p {:class (str "relative mx-2 text-xs text-left flex space-between " title-class)} text
+   (when (and value on-clear-value) [:button.cursor-pointer {:on-click on-clear-value} "✖️"])])
+
+
+(defn textbox [text & {:keys [title title-class class on-change default-value on-clear-value]
+                       :or {title-class ""
+                            class ""
+                            on-change (fn [_])}}]
   [:div {:class (str "w-full bg-gray-200 p-2 rounded-lg border-8" class)}
-   [:p {:class (str "mx-2 text-xs text-left " title-class)} text]
+   [label text :title-class title-class :value default-value :on-clear-value on-clear-value]
    [:input {:title title
             :type "text"
             :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black"
-            :default-value default-value
+            :value default-value
             :on-change #(on-change (.. % -target -value))}]])
 
 
-(defn selectbox [text options & {:keys [title title-class class on-change selected-value]
-                                  :or {title-class ""
-                                       class ""
-                                       on-change (fn [_])}}]
+(defn selectbox [text options & {:keys [title title-class class on-change selected-value on-clear-value]
+                                 :or {title-class ""
+                                      class ""
+                                      on-change (fn [_])}}]
   [:div {:class (str "w-full bg-gray-200 p-2 rounded-lg border-8" class)}
-   [:p {:class (str "mx-2 text-xs text-left " title-class)} text]
+   [label text :title-class title-class :value selected-value :on-clear-value on-clear-value]
    [:select {:title title
              :value selected-value
              :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black" :on-change #(on-change (.. % -target -value))}
