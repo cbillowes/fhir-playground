@@ -58,7 +58,7 @@
    [label text :title-class title-class :value default-value :on-clear-value on-clear-value :required? required?]
    [:input {:title title
             :type "text"
-            :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black"
+            :class "w-full py-1 outline-none border-b border-transparent focus:border-red-800 text-black"
             :value default-value
             :on-change #(on-change (.. % -target -value))}]])
 
@@ -72,8 +72,8 @@
    [label text :title-class title-class :value selected-value :on-clear-value on-clear-value :required? required?]
    [:select {:title title
              :value selected-value
-             :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black" :on-change #(on-change (.. % -target -value))}
-    [:option {:value "" :disabled true :selected true} "Select an option"]
+             :class "w-full py-1 outline-none border-b border-transparent focus:border-red-800 text-black" :on-change #(on-change (.. % -target -value))}
+    [:option {:value "" :disabled true :selected (empty? selected-value)} "Select an option"]
     (for [{:keys [value option disabled?]} options]
       ^{:key value} [:option {:value value :disabled disabled? :selected (= selected-value value)} option])]])
 
