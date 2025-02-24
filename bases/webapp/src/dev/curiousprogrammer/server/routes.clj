@@ -2,30 +2,12 @@
   (:require [compojure.core :refer [defroutes GET POST context]]
             [compojure.route :as route]
             [ring.util.response :as response]
-            [ring.util.anti-forgery :refer [anti-forgery-field]]
-            [ring.middleware.anti-forgery :refer [*anti-forgery-token*]]
-            [hiccup.core :refer [html]]
+            [dev.curiousprogrammer.server.base-template :as b]
             [dev.curiousprogrammer.fhir.interface :as fhir]))
 
 
-(defn base-template []
-  [:html
-   [:head
-    [:title "FHIR Database"]
-    [:meta {:charset "utf-8"}]
-    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
-    (let [csrf-token (force *anti-forgery-token*)]
-      [:meta {:name "csrf-token"
-              :content csrf-token}])
-    [:link {:rel "stylesheet" :href "/css/style.min.css" :type "text/css"}]]
-   [:body.bg-gray-800
-    (anti-forgery-field)
-    [:div#app]
-    [:script {:src "/js/main_bundle.js" :type "text/javascript"}]]])
-
-
 (defroutes web-routes
-  (GET "/*" [] (html (base-template)))
+  (GET "/*" [] (b/base-template))
   (route/not-found "Not Found"))
 
 
