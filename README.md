@@ -1,5 +1,7 @@
 # FHIR Playground
 
+![Example](./example.png)
+
 See [this (about)](https://www.hl7.org/fhir/) and [this (API)](https://hapi.fhir.org/baseR4).
 
 Fast Healthcare Interoperability Resources (FHIR) is a healthcare data standard with an API for representing and exchanging electronic health records (EHR). FHIR is an information network that lets you link data across systems and a communication network that lets you exchange data between systems.
