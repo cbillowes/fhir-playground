@@ -17,8 +17,7 @@
       (response/response {:status "ok"}))
 
     (GET "/fhir/filters" _
-      (response/response [{:key "*" :value "Any"}
-                          {:key "partial-name" :value "Partial Name"}
+      (response/response [{:key "partial-name" :value "Partial Name"}
                           {:key "given-name" :value "Given Name"}
                           {:key "family-name" :value "Family Name"}
                           {:key "phonetic-name" :value "Phonetic Name"}
