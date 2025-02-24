@@ -96,9 +96,7 @@
 (rf/reg-event-db
  :fhir/clear-filter-by
  (fn [db _]
-   (assoc db :fhir/filter-by (-> (:fhir/available-filters db)
-                                 (first)
-                                 (:key)))))
+   (dissoc db :fhir/filter-by)))
 
 
 (rf/reg-event-db
