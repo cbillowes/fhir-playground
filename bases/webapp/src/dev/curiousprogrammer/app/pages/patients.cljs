@@ -160,27 +160,26 @@
      [ui/layout
       [:<>
        [:div.flex.mb-4.items-stretch
-        [:div.grow
-         [:div.flex.gap-4.w-full
-          (when (seq available-filters)
-            [ui/selectbox "Search by:" available-filters
-             :title-class "text-red-900"
-             :class "w-1/2"
-             :required? true
-             :selected-value filter-by
-             :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
-             :on-change (fn [value]
-                          (rf/dispatch [:fhir/filter-by value])
-                          (rf/dispatch [:fhir/store-filter value filter-value]))])
-          [ui/textbox "Search value:"
-           :class "w-1/2"
-           :title-class "text-red-900"
-           :default-value filter-value
-           :required? true
-           :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
-           :on-change (fn [value]
-                        (rf/dispatch [:fhir/filter-value value])
-                        (rf/dispatch [:fhir/store-filter filter-by value]))]]]]
+        [:div.flex.gap-4.w-full
+         (when (seq available-filters)
+           [ui/selectbox "Search by:" available-filters
+            :title-class "text-red-900"
+            :class "w-1/2"
+            :required? true
+            :selected-value filter-by
+            :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
+            :on-change (fn [value]
+                         (rf/dispatch [:fhir/filter-by value])
+                         (rf/dispatch [:fhir/store-filter value filter-value]))])
+         [ui/textbox "Search value:"
+          :class "w-1/2"
+          :title-class "text-red-900"
+          :default-value filter-value
+          :required? true
+          :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
+          :on-change (fn [value]
+                       (rf/dispatch [:fhir/filter-value value])
+                       (rf/dispatch [:fhir/store-filter filter-by value]))]]]
        [ui/button (if loading? [:div.flex.justify-center [ui/spinner] "Fetching patients..."] "🔍 Search")
         :disabled? loading?
         :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer disabled:opacity-50 disabled:hover:bg-red-800 disabled:hover:text-red-800"
