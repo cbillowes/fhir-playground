@@ -38,17 +38,21 @@
 
 
 (defn label
-  [text & {:keys [title-class value on-clear-value]}]
-  [:p {:class (str "relative mx-2 text-xs text-left flex space-between " title-class)} text
-   (when (and value on-clear-value) [:button.cursor-pointer {:on-click on-clear-value} "✖️"])])
+  [text & {:keys [title-class value on-clear-value required?]}]
+  [:div {:class (str "relative text-xs text-left flex justify-between w-full " title-class)}
+   text
+   [:div.flex.items-center
+    (when required? [:p.text-red-800 "*"])
+    (when (and value on-clear-value) [:button.cursor-pointer {:on-click on-clear-value} "✖️"])]])
 
 
-(defn textbox [text & {:keys [title title-class class on-change default-value on-clear-value]
+(defn textbox [text & {:keys [title title-class class on-change default-value on-clear-value
+                              required?]
                        :or {title-class ""
                             class ""
                             on-change (fn [_])}}]
   [:div {:class (str "w-full bg-gray-200 p-2 rounded-lg border-8" class)}
-   [label text :title-class title-class :value default-value :on-clear-value on-clear-value]
+   [label text :title-class title-class :value default-value :on-clear-value on-clear-value :required? required?]
    [:input {:title title
             :type "text"
             :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black"
@@ -56,12 +60,13 @@
             :on-change #(on-change (.. % -target -value))}]])
 
 
-(defn selectbox [text options & {:keys [title title-class class on-change selected-value on-clear-value]
+(defn selectbox [text options & {:keys [title title-class class on-change selected-value on-clear-value
+                                        required?]
                                  :or {title-class ""
                                       class ""
                                       on-change (fn [_])}}]
-  [:div {:class (str "w-full bg-gray-200 p-2 rounded-lg border-8" class)}
-   [label text :title-class title-class :value selected-value :on-clear-value on-clear-value]
+  [:div {:class (str "w-full bg-gray-200 p-2 pr-4 rounded-lg border-8" class)}
+   [label text :title-class title-class :value selected-value :on-clear-value on-clear-value :required? required?]
    [:select {:title title
              :value selected-value
              :class "w-full p-2 outline-none border-b border-transparent focus:border-red-800 text-black" :on-change #(on-change (.. % -target -value))}

@@ -166,6 +166,7 @@
             [ui/selectbox "Search by:" available-filters
              :title-class "text-red-900"
              :class "w-1/2"
+             :required? true
              :selected-value filter-by
              :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
              :on-change (fn [value]
@@ -175,6 +176,7 @@
            :class "w-1/2"
            :title-class "text-red-900"
            :default-value filter-value
+           :required? true
            :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
            :on-change (fn [value]
                         (rf/dispatch [:fhir/filter-value value])
