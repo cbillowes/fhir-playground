@@ -45,7 +45,9 @@
     (POST "/fhir/patient-search" req
       (let [{:keys [body]} req
             filters (get body "filters")
-            res (fhir/fetch-patients 1 10 filters)]
+            page-index (Integer/parseInt (get body "page-index" "1"))
+            page-size (Integer/parseInt (get body "page-size"))
+            res (fhir/fetch-patients page-index page-size filters)]
         (if (empty? res)
-          (response/response {:status "error" :data "No patients found." :params body})
+          (response/response {:status "error" :data [] :message "No patients found." :params body})
           (response/response {:data res :params body}))))))

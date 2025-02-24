@@ -185,15 +185,19 @@
                      :format          (ajax/json-request-format)
                      :response-format (ajax/json-response-format {:keywords? true})
                      :on-success      [:fhir/search-patients-success]
-                     :on-failure      [:fhir/search-patients-failed]}}
-       {:db (assoc db :fhir/error required-message)
-        :dispatch-n [:fhir/search-patients-failed]}))))
+                     :on-failure      [:fhir/search-patients-failed "Something went wrong on the server."]}}
+       {:db db
+        :dispatch-n [:fhir/search-patients-failed required-message]}))))
 
 
 (rf/reg-event-db
  :fhir/search-patients-success
- (fn [db [_ {:keys [data]}]]
-   (assoc db :fhir/loading? false :fhir/patients data :fhir/searched-for-patients true)))
+ (fn [db [_ {:keys [data message]}]]
+   (assoc db
+          :fhir/loading? false
+          :fhir/patients data
+          :fhir/error message
+          :fhir/searched-for-patients true)))
 
 
 (rf/reg-event-db
@@ -213,80 +217,76 @@
         searched-for-patients @(rf/subscribe [:fhir/searched-for-patients])
         loading? @(rf/subscribe [:fhir/loading?])
         error-message @(rf/subscribe [:fhir/error])]
-    [:div {:class "my-8 max-w-4xl w-2/3 mx-auto text-center text-white leading-relaxed"}
-     [:h1.font-bold.my-2.text-4xl "🤒 Search for Patients"]
-     [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
-     [ui/layout
-      [:<>
-       [:div.flex.mb-4.items-stretch
-        [:div.flex.gap-4.w-full
-         [ui/selectbox
-          "Page size:"
-          (map
-           #(hash-map :option (str %) :value (str %))
-           (sort
-            (concat
-             (range 5 50 5)
-             (range 50 250 50))))
-          :class "w-1/2"
-          :title-class "text-red-900"
-          :selected-value page-size
-          :required? true
-          :on-clear-value #(rf/dispatch [:fhir/clear-page-size])
-          :on-change (fn [value]
-                       (rf/dispatch [:fhir/page-size value]))]]]
-       [:div.flex.mb-4.items-stretch
-        [:div.flex.gap-4.w-full
-         (when (seq available-filters)
-           [ui/selectbox "Search by:" available-filters
-            :title-class "text-red-900"
-            :class "w-1/2"
-            :required? true
-            :selected-value filter-by
-            :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
-            :on-change (fn [value]
-                         (rf/dispatch [:fhir/filter-by value])
-                         (rf/dispatch [:fhir/store-filter value filter-value]))])
-         [ui/textbox "Search value:"
-          :class "w-1/2"
-          :title-class "text-red-900"
-          :default-value filter-value
-          :required? true
-          :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
-          :on-change (fn [value]
-                       (rf/dispatch [:fhir/filter-value value])
-                       (rf/dispatch [:fhir/store-filter filter-by value]))]]]
-       [ui/button (if loading? [:div.flex.justify-center [ui/spinner] "Fetching patients..."] "🔍 Search")
-        :disabled? loading?
-        :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer disabled:opacity-50 disabled:hover:bg-red-800 disabled:hover:text-red-800"
-        :on-click #(rf/dispatch [:fhir/search-patients])]
-       (when error-message
-         [:div.mt-2.text-red-800.bg-red-200.rounded-md.p-2
-          [:div error-message]])
-       (when (or page-size custom-filters)
-         [:div.mt-2.flex.flex-wrap
-          (when page-size
-            [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-700
-             "page-size : " page-size [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/clear-page-size])]])
-          (for [[key value] custom-filters]
-            [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-800
-             key " : " value [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/remove-filter key])]])])]]
+    [:<>
+     [:div {:class "my-8 max-w-4xl w-2/3 mx-auto text-center text-white leading-relaxed"}
+      [:h1.font-bold.my-2.text-4xl "🤒 Search for Patients"]
+      [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
+      [ui/layout
        [:<>
-        (when searched-for-patients
-          (if (seq patients)
-            [:div.mt-4
-             [:table.w-full.bg-red-100.rounded-lg.overflow-hidden
-              [:thead
-               [:tr
-                [:th {:class "text-left px-4 py-2"} "ID"]
-                [:th {:class "text-left px-4 py-2"} "Patient"]
-                [:th {:class "text-left px-4 py-2"} "Gender"]
-                [:th {:class "text-left px-4 py-2"} "Date of Birth"]]]
-              [:tbody
-               (for [patient patients]
-                 [:tr
-                  [:td {:class "text-left px-4 py-2"} (:id patient)]
-                  [:td {:class "text-left px-4 py-2"} (:surname patient) ", " (:name patient)]
-                  [:td {:class "text-left px-4 py-2"} (:gender patient)]
-                  [:td {:class "text-left px-4 py-2"} (:date-of-birth patient)]])]]]
-            [:div "No patients found."]))]]))
+        [:div.flex.mb-4.items-stretch
+         [:div.flex.gap-4.w-full
+          [ui/selectbox
+           "Page size:"
+           (map
+            #(hash-map :option (str %) :value (str %))
+            (sort
+             (concat
+              (range 5 50 5)
+              (range 50 250 50))))
+           :class "w-1/2"
+           :title-class "text-red-900"
+           :selected-value page-size
+           :required? true
+           :on-clear-value #(rf/dispatch [:fhir/clear-page-size])
+           :on-change (fn [value]
+                        (rf/dispatch [:fhir/page-size value]))]]]
+        [:div.flex.mb-4.items-stretch
+         [:div.flex.gap-4.w-full
+          (when (seq available-filters)
+            [ui/selectbox "Search by:" available-filters
+             :title-class "text-red-900"
+             :class "w-1/2"
+             :required? true
+             :selected-value filter-by
+             :on-clear-value #(rf/dispatch [:fhir/clear-filter-by])
+             :on-change (fn [value]
+                          (rf/dispatch [:fhir/filter-by value])
+                          (rf/dispatch [:fhir/store-filter value filter-value]))])
+          [ui/textbox "Search value:"
+           :class "w-1/2"
+           :title-class "text-red-900"
+           :default-value filter-value
+           :required? true
+           :on-clear-value #(rf/dispatch [:fhir/clear-filter-value])
+           :on-change (fn [value]
+                        (rf/dispatch [:fhir/filter-value value])
+                        (rf/dispatch [:fhir/store-filter filter-by value]))]]]
+        [ui/button (if loading? [:div.flex.justify-center [ui/spinner] "Fetching patients..."] "🔍 Search")
+         :disabled? loading?
+         :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer disabled:opacity-50 disabled:hover:bg-red-800 disabled:hover:text-red-800 disabled:text-black!"
+         :on-click #(rf/dispatch [:fhir/search-patients])]
+        (when error-message
+          [:div.mt-2.text-red-800.bg-red-200.rounded-md.p-2
+           [:div error-message]])
+        (when (or page-size custom-filters)
+          [:div.mt-2.flex.flex-wrap
+           (when page-size
+             [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-700
+              "page-size : " page-size [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/clear-page-size])]])
+           (for [[key value] custom-filters]
+             [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-800
+              key " : " value [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/remove-filter key])]])])]]]
+     [:div {:class "text-white flex flex-wrap justify-center items-center"}
+      (for [patient patients]
+        [:div {:class "w-1/5 rounded-lg bg-slate-900 p-4 m-1 text-left"}
+         [:a {:class "text-sm"
+              :href (:link patient)} (:id patient)]
+         [:h2.text-center.font-bold.text-xl.uppercase (:name patient) " " (:surname patient)]
+         [:div {:class "my-4 leading-relaxed"}
+          [:p (cond
+                (= (:gender patient) "male") "👨"
+                (= (:gender patient) "female") "👩"
+                :else "🧑") " "
+           (:gender patient)]
+          [:p "🎂 " (:date-of-birth patient)]
+          [:p "💍 " (:marital-status patient)]]])]]))
