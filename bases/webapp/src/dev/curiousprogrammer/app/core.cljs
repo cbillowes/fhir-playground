@@ -16,21 +16,24 @@
   (gdom/getElement "app"))
 
 
-(defn- pages
+(defn- render
   []
-  (let [page-name @(rf/subscribe [:active-page])]
-    (case page-name
-      :home [home/page]
-      :search [patients/page]
-      [not-found/page])))
+  (let [active-page @(rf/subscribe [:active-page])]
+    [:<>
+     [ui/header active-page]
+     (case active-page
+       :home [home/page]
+       :search [patients/page]
+       [not-found/page])
+     [ui/footer]]))
 
 
 (defn app
   []
-  [:<>
-   [ui/header]
-   [pages]
-   [ui/footer]])
+  ;; The app is mount and the subscription is only read once so all
+  ;; to change the menu items and have all components re-render, the
+  ;; active page is queried and utilized in render pages component
+  [render])
 
 
 (defn mount [el]

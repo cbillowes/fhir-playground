@@ -3,9 +3,12 @@
 
 
 (defn- header-menu-item
-  [name page]
-  [:a.cursor-pointer.inline-block.rounded-md.px-4.py-1.my-4.bg-slate-700.hover:bg-yellow-400.hover:text-black
-   {:on-click #(rf/dispatch [:set-active-page {:page page}])} name])
+  [name page current-page]
+  [:a
+   {:class (str "cursor-pointer inline-block rounded-md px-4 py-1 my-4 bg-slate-700 hover:bg-yellow-400 hover:text-black"
+                (when (= page current-page) " bg-yellow-400! text-black!"))
+    :on-click #(rf/dispatch [:set-active-page {:page page}])}
+   name])
 
 
 (defn spinner
@@ -16,18 +19,18 @@
 
 
 (defn header
-  []
+  [current-page]
   [:header {:class "max-w-6xl mx-auto"}
    [:nav
-    [:ul.flex.text-white.gap-4
-     [:li [header-menu-item "Home" :home]]
-     [:li [header-menu-item "Search patients" :search]]]]])
+    [:ul {:class "flex justify-center text-white gap-4"}
+     [:li [header-menu-item "Home" :home current-page]]
+     [:li [header-menu-item "Search patients" :search current-page]]]]])
 
 
 (defn footer
   []
   [:footer
-   [:p.text-center.text-gray-400.p-4.mt-4.text-sm
+   [:p {:class "text-center text-gray-400 p-4 mt-4 text-sm"}
     (str "Copyright © " (-> (js/Date.) .getFullYear) " Curious Programmer")]])
 
 
@@ -41,7 +44,7 @@
   [text & {:keys [title-class value on-clear-value required?]}]
   [:div {:class (str "relative text-xs text-left flex justify-between w-full " title-class)}
    text
-   [:div.flex.items-center
+   [:div {:class "flex items-center"}
     (when required? [:p.text-red-800 "*"])
     (when (and value on-clear-value) [:button.cursor-pointer {:on-click on-clear-value} "✖️"])]])
 
