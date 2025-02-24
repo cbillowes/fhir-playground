@@ -4,6 +4,25 @@
             [dev.curiousprogrammer.app.ui :as ui]
             [dev.curiousprogrammer.app.api :as api]))
 
+(def ^:private default-page-size "15")
+(def ^:private required-message "Required fields are missing.")
+
+
+(rf/reg-event-fx
+ :fhir/initialize
+ (fn [{:keys [db]} _]
+   {:db (assoc db
+               :fhir/page-size default-page-size
+               :fhir/error required-message)
+    :dispatch-n [[:fhir/fetch-filters]]}))
+
+
+(defn- required-fields-valid?
+  [db]
+  (and (:fhir/page-size db)
+       (:fhir/filter-by db)
+       (:fhir/filter-value db)))
+
 
 (rf/reg-sub
  :fhir/custom-filters
@@ -12,6 +31,12 @@
     (fn [[k v]]
       [k v])
     (:fhir/custom-filters db))))
+
+
+(rf/reg-sub
+ :fhir/page-size-field
+ (fn [db _]
+   (:fhir/page-size db)))
 
 
 (rf/reg-sub
@@ -82,27 +107,54 @@
 
 
 (rf/reg-event-db
+ :fhir/page-size
+ (fn [db [_ value]]
+   (assoc db
+          :fhir/page-size value
+          :fhir/error (when (not (required-fields-valid? (assoc db :fhir/page-size value)))
+                        required-message))))
+
+
+(rf/reg-event-db
  :fhir/filter-value
  (fn [db [_ value]]
-   (assoc db :fhir/filter-value value)))
+   (assoc db
+          :fhir/filter-value value
+          :fhir/error (when (not (required-fields-valid? (assoc db :fhir/filter-value value)))
+                        required-message))))
 
 
 (rf/reg-event-db
  :fhir/filter-by
  (fn [db [_ value]]
-   (assoc db :fhir/filter-by value)))
+   (assoc db
+          :fhir/filter-by value
+          :fhir/error (when (not (required-fields-valid? (assoc db :fhir/filter-by value)))
+                        required-message))))
+
+
+(rf/reg-event-db
+ :fhir/clear-page-size
+ (fn [db _]
+   (-> db
+       (dissoc :fhir/page-size)
+       (assoc :fhir/error required-message))))
 
 
 (rf/reg-event-db
  :fhir/clear-filter-by
  (fn [db _]
-   (dissoc db :fhir/filter-by)))
+   (-> db
+       (dissoc :fhir/filter-by)
+       (assoc :fhir/error required-message))))
 
 
 (rf/reg-event-db
  :fhir/clear-filter-value
  (fn [db _]
-   (dissoc db :fhir/filter-value)))
+   (-> db
+       (dissoc :fhir/filter-value)
+       (assoc :fhir/error required-message))))
 
 
 (rf/reg-event-db
@@ -120,19 +172,21 @@
 (rf/reg-event-fx
  :fhir/search-patients
  (fn [{:keys [db]} _]
-   (let [key (:fhir/filter-by db)
+   (let [page-size (:fhir/page-size db)
+         key (:fhir/filter-by db)
          value (:fhir/filter-value db)]
-     (if (and key value)
+     (if (and page-size key value)
        {:db (assoc db :fhir/loading? true :fhir/error nil)
         :http-xhrio {:method          :post
                      :uri             api/route-fhir-patient-search
-                     :params          {:filters (:fhir/custom-filters db)}
+                     :params          {:filters (:fhir/custom-filters db)
+                                       :page-size (:fhir/page-size db)}
                      :headers         (api/get-csrf-header)
                      :format          (ajax/json-request-format)
                      :response-format (ajax/json-response-format {:keywords? true})
                      :on-success      [:fhir/search-patients-success]
                      :on-failure      [:fhir/search-patients-failed]}}
-       {:db (assoc db :fhir/error "Required fields are missing.")
+       {:db (assoc db :fhir/error required-message)
         :dispatch-n [:fhir/search-patients-failed]}))))
 
 
@@ -152,6 +206,7 @@
   []
   (let [available-filters @(rf/subscribe [:fhir/available-filters])
         custom-filters @(rf/subscribe [:fhir/custom-filters])
+        page-size @(rf/subscribe [:fhir/page-size-field])
         filter-by @(rf/subscribe [:fhir/filter-by-field])
         filter-value @(rf/subscribe [:fhir/filter-value-field])
         patients @(rf/subscribe [:fhir/patients])
@@ -163,6 +218,23 @@
      [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
      [ui/layout
       [:<>
+       [:div.flex.mb-4.items-stretch
+        [:div.flex.gap-4.w-full
+         [ui/selectbox
+          "Page size:"
+          (map
+           #(hash-map :option (str %) :value (str %))
+           (sort
+            (concat
+             (range 5 50 5)
+             (range 50 250 50))))
+          :class "w-1/2"
+          :title-class "text-red-900"
+          :selected-value page-size
+          :required? true
+          :on-clear-value #(rf/dispatch [:fhir/clear-page-size])
+          :on-change (fn [value]
+                       (rf/dispatch [:fhir/page-size value]))]]]
        [:div.flex.mb-4.items-stretch
         [:div.flex.gap-4.w-full
          (when (seq available-filters)
@@ -191,8 +263,11 @@
        (when error-message
          [:div.mt-2.text-red-800.bg-red-200.rounded-md.p-2
           [:div error-message]])
-       (when custom-filters
+       (when (or page-size custom-filters)
          [:div.mt-2.flex.flex-wrap
+          (when page-size
+            [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-700
+             "page-size : " page-size [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/clear-page-size])]])
           (for [[key value] custom-filters]
             [:div.text-sm.rounded-md.bg-gray-200.px-2.mr-2.mb-2.bg-slate-800
              key " : " value [ui/button "❌" :class "cursor-pointer" :on-click #(rf/dispatch [:fhir/remove-filter key])]])])]]

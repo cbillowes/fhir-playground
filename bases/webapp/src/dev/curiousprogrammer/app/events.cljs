@@ -26,7 +26,7 @@
                 :set-url    {:url "/"}}
 
        :search {:db          set-page
-                :dispatch-n [[:fhir/fetch-filters]]
+                :dispatch-n [[:fhir/initialize]]
                 :set-url    {:url "/search"}}))))
 
 
