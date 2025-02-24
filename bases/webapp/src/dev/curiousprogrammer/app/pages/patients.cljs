@@ -122,15 +122,20 @@
 (rf/reg-event-fx
  :fhir/search-patients
  (fn [{:keys [db]} _]
-   {:db (assoc db :fhir/loading? true :fhir/error nil)
-    :http-xhrio {:method          :post
-                 :uri             api/route-fhir-patient-search
-                 :params          {:filters (:fhir/custom-filters db)}
-                 :headers         (api/get-csrf-header)
-                 :format          (ajax/json-request-format)
-                 :response-format (ajax/json-response-format {:keywords? true})
-                 :on-success      [:fhir/search-patients-success]
-                 :on-failure      [:fhir/search-patients-failed]}}))
+   (let [key (:fhir/filter-by db)
+         value (:fhir/filter-value db)]
+     (if (and key value)
+       {:db (assoc db :fhir/loading? true :fhir/error nil)
+        :http-xhrio {:method          :post
+                     :uri             api/route-fhir-patient-search
+                     :params          {:filters (:fhir/custom-filters db)}
+                     :headers         (api/get-csrf-header)
+                     :format          (ajax/json-request-format)
+                     :response-format (ajax/json-response-format {:keywords? true})
+                     :on-success      [:fhir/search-patients-success]
+                     :on-failure      [:fhir/search-patients-failed]}}
+       {:db (assoc db :fhir/error "Required fields are missing.")
+        :dispatch-n [:fhir/search-patients-failed]}))))
 
 
 (rf/reg-event-db
@@ -153,7 +158,8 @@
         filter-value @(rf/subscribe [:fhir/filter-value-field])
         patients @(rf/subscribe [:fhir/patients])
         searched-for-patients @(rf/subscribe [:fhir/searched-for-patients])
-        loading? @(rf/subscribe [:fhir/loading?])]
+        loading? @(rf/subscribe [:fhir/loading?])
+        error-message @(rf/subscribe [:fhir/error])]
     [:div {:class "my-8 max-w-4xl w-2/3 mx-auto text-center text-white leading-relaxed"}
      [:h1.font-bold.my-2.text-4xl "🤒 Search for Patients"]
      [:p "This application is using the " [:a.underline.text-yellow-400.hover:text-gray-400 {:href "https://hapi.fhir.org/baseR4" :target "_blank"} "HAPI API"] " to fetch data."]
@@ -184,6 +190,9 @@
         :disabled? loading?
         :class "w-full bg-red-800 text-red-200 hover:bg-yellow-400 hover:text-yellow-900 cursor-pointer disabled:opacity-50 disabled:hover:bg-red-800 disabled:hover:text-red-800"
         :on-click #(rf/dispatch [:fhir/search-patients])]
+       (when error-message
+         [:div.mt-2.text-red-800.bg-red-200.rounded-md.p-2
+          [:div error-message]])
        (when custom-filters
          [:div.mt-2.flex.flex-wrap
           (for [[key value] custom-filters]
